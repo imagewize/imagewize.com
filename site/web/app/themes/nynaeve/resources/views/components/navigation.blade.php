@@ -28,9 +28,9 @@
                 @endif
               </a>
               @if ($item->children)
-                <ul class="my-child-menu md:hidden md:group-hover:block md:absolute md:top-full md:left-0 md:min-w-[200px] md:bg-white md:shadow-lg md:z-50 text-base text-gray-700 pl-4 md:pl-0">
+                <ul class="hidden md:group-hover:block md:absolute md:top-full md:left-0 md:min-w-[200px] md:bg-white md:shadow-lg md:z-50 text-base text-gray-700">
                   @foreach ($item->children as $child)
-                    <li class="my-child-item {{ $child->classes ?? '' }} {{ $child->active ? 'active' : '' }} md:block no-underline hover:text-black hover:bg-gray-100 py-2 px-4">
+                    <li class="my-child-item {{ $child->classes ?? '' }} {{ $child->active ? 'active' : '' }} block no-underline hover:text-black hover:bg-gray-100 py-2 px-4">
                       <a href="{{ $child->url }}">
                         {{ $child->label }}
                       </a>
