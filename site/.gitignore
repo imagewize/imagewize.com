@@ -3,10 +3,14 @@ web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
 web/app/themes/twentytwentyfive/
+web/app/themes/ianua/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
+
+# Database data
+imwz_2024-11-14.sql
 
 # WordPress
 web/wp
@@ -21,6 +25,7 @@ web/.htaccess
 !.env.example
 
 # Composer
+auth.json
 /vendor
 
 # WP-CLI

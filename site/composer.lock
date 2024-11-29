@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "463d5c995c8079b41260365af805b283",
+    "content-hash": "048ae4bca0607ce5e5a3aa835ca95a03",
     "packages": [
         {
             "name": "composer/installers",
@@ -338,6 +338,20 @@
                 }
             ],
             "time": "2024-07-20T21:41:07+00:00"
+        },
+        {
+            "name": "pronamic/gravityforms",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:pronamic/gravityforms.git",
+                "reference": "main"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/pronamic/gravityforms/archive/refs/heads/main.zip"
+            },
+            "type": "library"
         },
         {
             "name": "roots/bedrock-autoloader",
@@ -1088,6 +1102,42 @@
             "time": "2024-07-20T21:52:34+00:00"
         },
         {
+            "name": "wpackagist-plugin/autodescription",
+            "version": "5.1.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/autodescription/",
+                "reference": "tags/5.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/autodescription.5.1.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/autodescription/"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce",
+            "version": "9.4.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woocommerce/",
+                "reference": "tags/9.4.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce.9.4.2.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce/"
+        },
+        {
             "name": "wpackagist-theme/twentytwentyfive",
             "version": "1.0",
             "source": {
@@ -1104,6 +1154,22 @@
             },
             "type": "wordpress-theme",
             "homepage": "https://wordpress.org/themes/twentytwentyfive/"
+        },
+        {
+            "name": "wpengine/advanced-custom-fields-pro",
+            "version": "6.3.11",
+            "dist": {
+                "type": "zip",
+                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?s=composer&p=pro&t=6.3.11"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "replace": {
+                "wpackagist-plugin/advanced-custom-fields": "self.version",
+                "wpengine/advanced-custom-fields": "self.version"
+            },
+            "type": "wordpress-plugin"
         }
     ],
     "packages-dev": [
@@ -1606,6 +1672,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "pronamic/gravityforms": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
