@@ -34,23 +34,14 @@
       "url":"https://connect.advancedcustomfields.com"
     },
     {
-      "type": "composer",
-      "url": "https://wpackagist.org",
-      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
-    },
-    {
       "type": "package",
       "package": {
         "name": "pronamic/gravityforms",
-        "version": "dev-main",
+        "version": "2.9.0",
+        "type": "wordpress-plugin",
         "dist": {
-          "url": "https://github.com/pronamic/gravityforms/archive/refs/heads/main.zip",
+          "url": "https://github.com/pronamic/gravityforms/archive/refs/tags/2.9.0.zip",
           "type": "zip"
-        },
-        "source": {
-          "url": "git@github.com:pronamic/gravityforms.git",
-          "type": "git",
-          "reference": "main"
         }
       }
     }
@@ -69,7 +60,7 @@
     "wpackagist-plugin/woocommerce": "^9.4",
     "wpackagist-plugin/autodescription": "^5.1",
     "wpengine/advanced-custom-fields-pro": "^6.3",
-    "pronamic/gravityforms": "dev-main"
+    "pronamic/gravityforms": "2.9.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",

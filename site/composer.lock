@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "048ae4bca0607ce5e5a3aa835ca95a03",
+    "content-hash": "309008ea8aacf996a5b8f68f26b26048",
     "packages": [
         {
             "name": "composer/installers",
@@ -341,17 +341,12 @@
         },
         {
             "name": "pronamic/gravityforms",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:pronamic/gravityforms.git",
-                "reference": "main"
-            },
+            "version": "2.9.0",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/pronamic/gravityforms/archive/refs/heads/main.zip"
+                "url": "https://github.com/pronamic/gravityforms/archive/refs/tags/2.9.0.zip"
             },
-            "type": "library"
+            "type": "wordpress-plugin"
         },
         {
             "name": "roots/bedrock-autoloader",
@@ -1672,7 +1667,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "pronamic/gravityforms": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
