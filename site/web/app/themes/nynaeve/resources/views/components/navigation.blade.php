@@ -20,7 +20,7 @@
       <!-- Logo ends -->
       <!-- Menu starts -->
       <div id="menu" class="hidden peer-checked:block md:flex md:items-center 
-      w-full md:w-auto absolute top-12 md:static">
+      w-full md:w-auto absolute top-12 left-0 md:static bg-neutral-900 md:bg-none">
         <ul class="md:flex items-center justify-between text-base pt-4 md:pt-0">
           @foreach ($menu->all() as $item)
             <li class="group my-menu-item relative {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }} 
@@ -30,15 +30,15 @@
                 {{ $item->label }}
                 @if ($item->children)
                   <svg class="ml-1 inline-block w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                  </svg>
                 @endif
               </a>
               @if ($item->children)
                 <!-- Child menu items start -->
-                <ul class="hidden md:group-hover:block md:absolute md:top-full md:left-0 md:min-w-[200px] md:bg-white md:shadow-lg md:z-50 text-base text-gray-700">
+                <ul class="hidden md:group-hover:block md:absolute md:top-full md:left-0 md:min-w-[200px] 
+                md:bg-neutral-900 md:shadow-lg md:z-50 text-base text-textBodyGray ">
                   @foreach ($item->children as $child)
-                    <li class="my-child-item {{ $child->classes ?? '' }} {{ $child->active ? 'active' : '' }} block no-underline hover:text-black hover:bg-gray-100 py-2 px-4">
+                    <li class="my-child-item {{ $child->classes ?? '' }} {{ $child->active ? 'active' : '' }} block no-underline 
+                     py-2 px-4 hover:text-white">
                       <a href="{{ $child->url }}">
                         {{ $child->label }}
                       </a>
