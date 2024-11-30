@@ -1249,6 +1249,11 @@
           "color": "#4c0519",
           "name": "Rose 950",
           "slug": "rose-950"
+        },
+        {
+          "color": "#98999a",
+          "name": "TextBodyGray",
+          "slug": "textbodygray"
         }
       ]
     },
