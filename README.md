@@ -1,4 +1,4 @@
-# Imagewize.com
+# Imagewize
 
 This repository contains the complete setup for imagewize.com, built using the modern WordPress stack by Roots.io, including Trellis, Bedrock, and Sage 10.
 
@@ -11,7 +11,7 @@ Trellis needs to run on a clean VPS, Ubuntu 24.0.4 LTS will do. Also SSH access 
 - Node.js >= 16
 - Yarn or NPM
 - Ansible >= 2.10 (for Trellis)
-- Virtualbox & Vagrant (for local development)
+- Virtualbox & Vagrant or Limactl (for local development)
 
 ## Installation
 
