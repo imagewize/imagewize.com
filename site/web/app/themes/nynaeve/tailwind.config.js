@@ -3,7 +3,9 @@ const config = {
   content: ['./app/**/*.php', './resources/**/*.{php,vue,js}'],
   theme: {
     extend: {
-      colors: {}, // Extend Tailwind's default colors
+      colors: {
+        textBodyGray: '#98999a',
+      },
     },
   },
   plugins: [],
