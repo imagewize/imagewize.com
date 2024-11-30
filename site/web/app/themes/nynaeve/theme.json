@@ -1292,6 +1292,11 @@
           "fontFamily": "ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace",
           "name": "Ui-monospace",
           "slug": "mono"
+        },
+        {
+          "fontFamily": "Open Sans, sans-serif",
+          "name": "Open Sans",
+          "slug": "open-sans"
         }
       ],
       "fontSizes": [

@@ -4,7 +4,7 @@
     <div class="w-full container flex flex-wrap items-center justify-between mt-0 px-6 py-3">
       <!-- Toggle icon starts -->
       <label for="menu-toggle" class="cursor-pointer md:hidden block">
-        <svg class="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+        <svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <title>menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
         </svg>
@@ -13,17 +13,19 @@
       <!-- Toggle icon ends -->
        <!-- Logo starts -->
       <div id="logo">
-          <a class="brand flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl uppercase" href="{{ home_url('/') }}">
+          <a class="brand flex items-center tracking-wide no-underline hover:no-underline font-bold text-white text-xl uppercase" href="{{ home_url('/') }}">
               {!! $siteName !!}
           </a>
       </div>
       <!-- Logo ends -->
       <!-- Menu starts -->
-      <div id="menu" class="hidden peer-checked:block md:flex md:items-center md:w-auto w-full">
+      <div id="menu" class="hidden peer-checked:block md:flex md:items-center 
+      w-full md:w-auto absolute top-12 md:static">
         <ul class="md:flex items-center justify-between text-base pt-4 md:pt-0">
           @foreach ($menu->all() as $item)
             <li class="group my-menu-item relative {{ $item->classes ?? '' }} {{ $item->active ? 'active' : '' }} 
-            flex md:block no-underline text-textBodyGray hover:text-white py-2 px-4">
+            flex md:block py-2 px-4 no-underline 
+              font-open-sans text-textBodyGray hover:text-white">
               <a href="{{ $item->url }}" class="inline-block">
                 {{ $item->label }}
                 @if ($item->children)

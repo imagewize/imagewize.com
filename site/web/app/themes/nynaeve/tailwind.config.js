@@ -6,6 +6,9 @@ const config = {
       colors: {
         textBodyGray: '#98999a',
       },
+      fontFamily: {
+        'open-sans': 'Open Sans, sans-serif',
+      },
     },
   },
   plugins: [],
