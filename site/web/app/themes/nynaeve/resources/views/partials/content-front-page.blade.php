@@ -5,23 +5,21 @@
         @php(the_row())
 
         @if(get_row_layout() == 'about_block')
-            <section id="about" class="py-16">
-                <div class="container mx-auto px-4">
-                    <div class="mb-12">
-                        <h2 class="text-3xl font-bold text-center">{{ get_sub_field('about_title') }}</h2>
-                    </div>
+            <section id="about" class="py-24 bg-bgGray">
+                <div class="container mx-auto max-w-4xl px-4">
                     <div class="flex flex-col md:flex-row gap-8">
                         <div class="md:w-1/4 w-full">
-                            <div class="rounded-full overflow-hidden">
+                            <div id="about-profile" class="rounded-full overflow-hidden w-[6.25rem] h-[6.25rem] border-4 border-borderGray mx-auto">
                                 @php($image = get_sub_field('about_profile_picture'))
                                 @if(!empty($image))
-                                    <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="w-full">
+                                    <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="w-full h-full object-cover">
                                 @endif
                             </div>
                         </div>
                         <div class="md:w-3/4 w-full">
-                            <p class="text-xl mb-6">{{ get_sub_field('about_lead') }}</p>
-                            <div class="prose">{!! get_sub_field('about_text') !!}</div>
+                            <h2 id="about-header" class="text-3xl font-open-sans font-bold mb-6">{{ get_sub_field('about_title') }}</h2>
+                            <p class="text-xl leading-relaxed font-light mb-6 text-textBodyGray font-open-sans">{{ get_sub_field('about_lead') }}</p>
+                            <div class="prose text-textBodyGray leading-relaxed font-light font-open-sans">{!! get_sub_field('about_text') !!}</div>
                         </div>
                     </div>
                 </div>
@@ -53,15 +51,48 @@
             </section>
 
         @elseif(get_row_layout() == 'cta_banner')
-            <section id="CTA" class="py-16 bg-primary-600 text-white">
-                <div class="container mx-auto px-4 text-center">
-                    <h2 class="text-3xl font-bold mb-6">{{ get_sub_field('cta_title') }}</h2>
-                    <p class="text-xl mb-8">{{ get_sub_field('cta_text') }}</p>
-                    <a href="{{ get_sub_field('cta_button_url') }}" class="inline-block px-8 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <section id="CTA" class="py-16 bg-ctaBlue text-white">
+                <div class="container mx-auto max-w-2xl px-4 text-center">
+                    <h2 class="text-3xl font-open-sans font-bold my-6">{{ get_sub_field('cta_title') }}</h2>
+                    <p class="text-lg font-open-sans mb-8">{{ get_sub_field('cta_text') }}</p>
+                    <a href="{{ get_sub_field('cta_button_url') }}" class="inline-flex items-center justify-center h-16 w-full max-w-80 px-8 py-3 
+                    bg-ctaButtonBlue hover:bg-ctaButtonBlueHover text-white rounded-lg font-semibold">
                         {{ get_sub_field('cta_button_text') }}
                     </a>
                 </div>
             </section>
+            <section id="reviews" class="bg-orange-500 py-24">
+              <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+                <!-- Review 1 -->
+                <div class="text-center">
+                  <img
+                    src="@asset('images/profiles/dall-e-profile-stylish-male.webp')"
+                    alt="Profile 1"
+                    class="w-24 h-24 mx-auto rounded-full mb-4"
+                  />
+                  <p class="text-lg font-semibold">"This service is fantastic! Highly recommend to anyone."</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="text-center">
+                  <img
+                    src="@asset('images/profiles/dall-e-profile-female.webp')"
+                    alt="Profile 2"
+                    class="w-24 h-24 mx-auto rounded-full mb-4"
+                  />
+                  <p class="text-lg font-semibold">"Amazing experience. The quality exceeded my expectations."</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="text-center">
+                  <img
+                    src="@asset('images/profiles/dall-e-profile image-male.webp')"
+                    alt="Profile 3"
+                    class="w-24 h-24 mx-auto rounded-full mb-4"
+                  />
+                  <p class="text-lg font-semibold">"Outstanding support and attention to detail. Five stars!"</p>
+                </div>
+              </div>
+            </section
+
         @endif
     @endwhile
 @endif
