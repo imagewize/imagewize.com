@@ -1,10 +1,26 @@
 # Imagewize
 
-This repository contains the complete setup for imagewize.com, built using the modern WordPress stack by Roots.io, including Trellis, Bedrock, and Sage 10.
+Custom web design and e-commerce solutions, crafted with WordPress and WooCommerce. We're a digital agency specializing in creating beautiful, high-performing websites that drive results.
+
+## About Us
+
+Since our founding, we've had the privilege of working with outstanding clients across multiple countries, including:
+- The Netherlands
+- Belgium
+- United States
+- Denmark
+
+Our expertise spans custom web design, e-commerce solutions, and digital strategy, helping businesses establish a strong online presence.
+
+## Technical Stack
+
+This repository contains the complete setup for imagewize.com, built using the modern WordPress stack by Roots.io, including:
+
+- **Trellis**: Server provisioning and deployment ([See Trellis README](trellis/README.md))
+- **Bedrock**: Modern WordPress boilerplate ([See Bedrock README](site/README.md))
+- **Sage 10**: Modern WordPress theme framework with our custom theme Nyneave
 
 ## Requirements
-
-Trellis needs to run on a clean VPS, Ubuntu 24.0.4 LTS will do. Also SSH access is needed using your SSH public key. This package is all set up for that. Other teammates can always be added at a later stage.
 
 - PHP >= 8.1
 - Composer
@@ -13,41 +29,10 @@ Trellis needs to run on a clean VPS, Ubuntu 24.0.4 LTS will do. Also SSH access 
 - Ansible >= 2.10 (for Trellis)
 - Virtualbox & Vagrant or Limactl (for local development)
 
-## Installation
+## Getting Started
 
-Just like with any Trellis installation the provisioning and deployment should be done using its instructions. 
-
-
-## Components
-
-### Trellis
-Trellis provides server provisioning and deployment tools using Ansible. It creates a consistent, secure WordPress hosting environment with:
-
-- Limactl for local developemnt
-- Nginx
-- PHP 8.2
-- MariaDB
-- SSL via Let's Encrypt
-- Automated deployments
-- Server hardening
-
-### Bedrock
-Bedrock is a modern WordPress boilerplate that improves the folder structure and security:
-- Dependency management with Composer
-- Environment variables using dotenv
-- Enhanced security practices
-- Better folder organization
-- Modern development workflows
-
-### Nyneave
-Nyneave is a Sage 10 based theme featuring all the goodies it has to offer and more:
-- Laravel Blade templating
-- Modern frontend tooling with Webpack
-- WP Acorn for Laravel Integration
-- Tailwind CSS
-- Bud for asset compilation
-- Yarn for package management
-- Log1x Navigation
-- Blade UI Icons
-- WooCommerce
+1. Clone this repository
+2. Follow the setup instructions in the respective component READMEs:
+   - For server setup: [Trellis README](trellis/README.md)
+   - For WordPress setup: [Bedrock README](site/README.md)
 
