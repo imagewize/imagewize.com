@@ -10,6 +10,8 @@ const config = {
         ctaBlue: '#017cb6',
         ctaButtonBlue: '#026492',
         ctaButtonBlueHover: '#02567e',
+        footerBg: '#171b23',
+        footerText: '#465166',
       },
       fontFamily: {
         'open-sans': 'Open Sans, sans-serif',
