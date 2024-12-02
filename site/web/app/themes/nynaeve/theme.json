@@ -1279,6 +1279,16 @@
           "color": "#02567e",
           "name": "CtaButtonBlueHover",
           "slug": "ctabuttonbluehover"
+        },
+        {
+          "color": "#171b23",
+          "name": "FooterBg",
+          "slug": "footerbg"
+        },
+        {
+          "color": "#465166",
+          "name": "FooterText",
+          "slug": "footertext"
         }
       ]
     },
@@ -1291,6 +1301,7 @@
     },
     "spacing": {
       "padding": true,
+      "margin": true,
       "units": [
         "px",
         "%",
@@ -1391,6 +1402,14 @@
           "slug": "9xl"
         }
       ]
+    },
+    "blocks": {
+      "core/heading": {
+        "spacing": {
+          "padding": true,
+          "margin": true
+        }
+      }
     }
   }
 }

@@ -68,11 +68,20 @@ export default async (app) => {
       },
       spacing: {
         padding: true,
+        margin: true,
         units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
       },
       typography: {
         customFontSize: false,
       },
+      blocks: {
+        'core/heading': {
+          spacing: {
+            padding: true,
+            margin: true,
+          }
+        },
+		  }
     })
     .useTailwindColors()
     .useTailwindFontFamily()
