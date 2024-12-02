@@ -9,7 +9,7 @@
                 <div class="container mx-auto max-w-4xl px-4">
                     <div class="flex flex-col md:flex-row gap-8">
                         <div class="md:w-1/4 w-full">
-                            <div id="about-profile" class="rounded-full overflow-hidden w-[6.25rem] h-[6.25rem] border-4 border-borderGray mx-auto">
+                            <div id="about-profile" class="rounded-full overflow-hidden w-24 h-24 border-8 border-borderGray mx-auto">
                                 @php($image = get_sub_field('about_profile_picture'))
                                 @if(!empty($image))
                                     <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="w-full h-full object-cover">
@@ -19,7 +19,7 @@
                         <div class="md:w-3/4 w-full">
                             <h2 id="about-header" class="text-3xl font-open-sans font-bold mb-6">{{ get_sub_field('about_title') }}</h2>
                             <p class="text-xl leading-relaxed font-light mb-6 text-textBodyGray font-open-sans">{{ get_sub_field('about_lead') }}</p>
-                            <div class="prose text-textBodyGray leading-relaxed font-light font-open-sans">{!! get_sub_field('about_text') !!}</div>
+                            <div class="prose text-textBodyGray text-base leading-loose font-open-sans">{!! get_sub_field('about_text') !!}</div>
                         </div>
                     </div>
                 </div>
@@ -27,10 +27,11 @@
 
         @elseif(get_row_layout() == 'services_intro')
             <section id="services" class="py-16 bg-gray-50">
-                <div class="container mx-auto px-4">
+                <div class="container mx-auto max-w-4xl px-4">
                     <div class="mb-12">
-                        <h2 class="text-3xl font-bold text-center">{{ get_sub_field('services_title') }}</h2>
-                        <p class="text-xl mt-4 text-center">{{ get_sub_field('services_introduction_text_block') }}</p>
+                        <h2 class="text-3xl font-bold text-center font-open-sans">{{ get_sub_field('services_title') }}</h2>
+                        <p class="text-xl leading-relaxed my-8 text-center text-textBodyGray 
+                        font-open-sans font-light max-w-3xl">{{ get_sub_field('services_introduction_text_block') }}</p>
                     </div>
 
         @elseif(get_row_layout() == 'services_blocks')
@@ -38,11 +39,12 @@
                     @if(have_rows('services_boxes'))
                         @while(have_rows('services_boxes'))
                             @php(the_row())
-                            <div class="bg-white p-6 rounded-lg shadow">
-                                <span class="text-3xl text-primary-600 mb-4 block"><i class="{{ get_sub_field('text_box_icon') }}"></i></span>
+                            <div class="bg-white p-6 rounded-lg">
+                                <span class="text-3xl text-primary-600 mb-4 block"><i class="{{ get_sub_field('text_box_icon') }}">
+                                </i></span>
                                 <div>
                                     <h3 class="text-xl font-semibold mb-3">{{ get_sub_field('text_box_title') }}</h3>
-                                    <div class="prose">{!! get_sub_field('text_box') !!}</div>
+                                    <div class="prose text-textBodyGray font-open-sans leading-loose">{!! get_sub_field('text_box') !!}</div>
                                 </div>
                             </div>
                         @endwhile
