@@ -64,6 +64,10 @@
                 </div>
             </section>
             <section id="reviews" class="bg-orange-500 py-24">
+              <div class="container mx-auto max-w-xl">
+                <h2 class="text-3xl font-open-sans font-bold text-white text-center mb-10">
+                  Client Reviews.</h2>
+              </div>
               <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
                 <!-- Review 1 -->
                 <div class="text-center">
