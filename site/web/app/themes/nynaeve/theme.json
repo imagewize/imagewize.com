@@ -1254,6 +1254,31 @@
           "color": "#98999a",
           "name": "TextBodyGray",
           "slug": "textbodygray"
+        },
+        {
+          "color": "#ebeced",
+          "name": "BgGray",
+          "slug": "bggray"
+        },
+        {
+          "color": "#cbcbcb",
+          "name": "BorderGray",
+          "slug": "bordergray"
+        },
+        {
+          "color": "#017cb6",
+          "name": "CtaBlue",
+          "slug": "ctablue"
+        },
+        {
+          "color": "#026492",
+          "name": "CtaButtonBlue",
+          "slug": "ctabuttonblue"
+        },
+        {
+          "color": "#02567e",
+          "name": "CtaButtonBlueHover",
+          "slug": "ctabuttonbluehover"
         }
       ]
     },

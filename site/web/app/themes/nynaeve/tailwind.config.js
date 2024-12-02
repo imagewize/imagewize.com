@@ -5,6 +5,11 @@ const config = {
     extend: {
       colors: {
         textBodyGray: '#98999a',
+        bgGray: '#ebeced',
+        borderGray: '#cbcbcb',
+        ctaBlue: '#017cb6',
+        ctaButtonBlue: '#026492',
+        ctaButtonBlueHover: '#02567e',
       },
       fontFamily: {
         'open-sans': 'Open Sans, sans-serif',
