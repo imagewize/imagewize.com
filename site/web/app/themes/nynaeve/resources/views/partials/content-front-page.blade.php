@@ -17,7 +17,7 @@
                             </div>
                         </div>
                         <div class="md:w-3/4 w-full">
-                            <h2 id="about-header" class="text-3xl font-open-sans font-bold mb-6">{{ get_sub_field('about_title') }}</h2>
+                            <h2 id="about-header" class="text-3xl font-open-sans font-semi-bold mb-6">{{ get_sub_field('about_title') }}</h2>
                             <p class="text-xl leading-relaxed font-light mb-6 text-textBodyGray font-open-sans">{{ get_sub_field('about_lead') }}</p>
                             <div class="prose text-textBodyGray text-base leading-loose font-open-sans">{!! get_sub_field('about_text') !!}</div>
                         </div>
@@ -72,7 +72,7 @@
                     alt="Profile 1"
                     class="w-24 h-24 mx-auto rounded-full mb-4"
                   />
-                  <p class="text-lg font-semibold">"This service is fantastic! Highly recommend to anyone."</p>
+                  <p class="text-lg font-base font-open-sans">"This service is fantastic! Highly recommend to anyone."</p>
                 </div>
                 <!-- Review 2 -->
                 <div class="text-center">
@@ -81,7 +81,7 @@
                     alt="Profile 2"
                     class="w-24 h-24 mx-auto rounded-full mb-4"
                   />
-                  <p class="text-lg font-semibold">"Amazing experience. The quality exceeded my expectations."</p>
+                  <p class="text-lg font-base font-open-sans">"Amazing experience. The quality exceeded my expectations."</p>
                 </div>
                 <!-- Review 3 -->
                 <div class="text-center">
@@ -90,7 +90,7 @@
                     alt="Profile 3"
                     class="w-24 h-24 mx-auto rounded-full mb-4"
                   />
-                  <p class="text-lg font-semibold">"Outstanding support and attention to detail. Five stars!"</p>
+                  <p class="text-lg font-base font-open-sans">"Outstanding support and attention to detail. Five stars!"</p>
                 </div>
               </div>
             </section
