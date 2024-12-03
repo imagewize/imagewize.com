@@ -64,42 +64,29 @@
                     </a>
                 </div>
             </section>
+        @elseif(get_row_layout() == 'review_block')
             <section id="reviews" class="bg-orange-500 py-24">
               <div class="container mx-auto max-w-xl">
                 <h2 class="text-3xl font-open-sans font-bold text-white text-center mb-10">
-                  Client Reviews.</h2>
+                {{ get_sub_field('review_header') }}</h2>
               </div>
               <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
-                <!-- Review 1 -->
-                <div class="text-center">
-                  <img
-                    src="@asset('images/profiles/dall-e-profile-stylish-male.webp')"
-                    alt="Profile 1"
-                    class="w-24 h-24 mx-auto rounded-full mb-4"
-                  />
-                  <p class="text-lg font-base font-open-sans">"This service is fantastic! Highly recommend to anyone."</p>
-                </div>
-                <!-- Review 2 -->
-                <div class="text-center">
-                  <img
-                    src="@asset('images/profiles/dall-e-profile-female.webp')"
-                    alt="Profile 2"
-                    class="w-24 h-24 mx-auto rounded-full mb-4"
-                  />
-                  <p class="text-lg font-base font-open-sans">"Amazing experience. The quality exceeded my expectations."</p>
-                </div>
-                <!-- Review 3 -->
-                <div class="text-center">
-                  <img
-                    src="@asset('images/profiles/dall-e-profile image-male.webp')"
-                    alt="Profile 3"
-                    class="w-24 h-24 mx-auto rounded-full mb-4"
-                  />
-                  <p class="text-lg font-base font-open-sans">"Outstanding support and attention to detail. Five stars!"</p>
-                </div>
+                @if(have_rows('review_boxes'))
+                    @while(have_rows('review_boxes'))
+                        @php(the_row())
+                        <div class="text-center">
+                            @php($profile_image = get_sub_field('text_box_profile_image'))
+                            <img
+                                src="{{ $profile_image['url'] ?? '' }}"
+                                alt="{{ $profile_image['alt'] ?? 'Profile image' }}"
+                                class="w-24 h-24 mx-auto rounded-full mb-4"
+                            />
+                            <p class="text-lg font-base font-open-sans">{{ get_sub_field('review_text_box') }}</p>
+                        </div>
+                    @endwhile
+                @endif
               </div>
-            </section
-
+            </section>
         @endif
     @endwhile
 @endif
