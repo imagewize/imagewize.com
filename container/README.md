@@ -49,10 +49,21 @@ The `www-data` user is properly configured in the PHP container:
 
 ## Usage
 
-- To access the PHP container:
+- To access the PHP container (note the full container name):
   ```sh
-  docker-compose exec php bash
+  docker compose exec php bash
+  # or using direct container name
+  docker exec -it container-php-1 bash
   ```
+
+> Note: The container name 'container-php-1' comes from:
+> - 'container': directory name (project name)
+> - 'php': service name
+> - '1': instance number
+>
+> You can also set a custom project name using the COMPOSE_PROJECT_NAME environment variable
+> or the `-p` flag with docker-compose commands.
+
 - To switch to www-data user:
   ```sh
   su - www-data
@@ -63,11 +74,11 @@ The `www-data` user is properly configured in the PHP container:
   ```
 - To access the Node container:
   ```sh
-  docker-compose exec node bash
+  docker compose exec node bash
   ```
 - To access the MariaDB container:
   ```sh
-  docker-compose exec db bash
+  docker compose exec db bash
   ```
 
 ## Clean Up
@@ -76,3 +87,4 @@ To stop and remove all containers, networks, and volumes:
 ```sh
 docker-compose down -v
 ```
+````
