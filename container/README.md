@@ -36,7 +36,7 @@ This setup is designed to run Roots Bedrock on Docker with PHP, Node, MariaDB, a
 
 - **WP-CLI**: Installed in the PHP container for managing WordPress from the command line.
 - **Composer**: Installed in the PHP container for managing PHP dependencies.
-- **Git**: Installed in the PHP container for version control.
+- **Git**: Installed in the PHP container for version control and package downloads.
 
 ## User Configuration
 
@@ -59,7 +59,7 @@ The `www-data` user is properly configured in the PHP container:
   ```
 - To run WP-CLI as www-data:
   ```sh
-  wp-cli <command>
+  wp <command>
   ```
 - To access the Node container:
   ```sh
