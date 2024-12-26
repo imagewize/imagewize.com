@@ -8,8 +8,10 @@ services:
       - ../site:/srv/www
       - /tmp:/tmp
       - node_binaries:/usr/local/node:ro  # Added read-only flag
+      - volta_home:/usr/local/volta:ro
     environment:
-      - PATH=/usr/local/node/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      - PATH=/usr/local/node/bin:/usr/local/volta/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      - VOLTA_HOME=/usr/local/volta
     networks:
       - app-network
     depends_on:
@@ -48,8 +50,10 @@ services:
     volumes:
       - ../site:/srv/www
       - node_binaries:/usr/local/node
+      - volta_home:/usr/local/volta
     environment:
-      - PATH=/usr/local/node/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      - PATH=/usr/local/node/bin:/usr/local/volta/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+      - VOLTA_HOME=/usr/local/volta
     tty: true
     stdin_open: true
     command: tail -f /dev/null
@@ -58,6 +62,7 @@ services:
 
 volumes:
   node_binaries:
+  volta_home:
 
 networks:
   app-network:
