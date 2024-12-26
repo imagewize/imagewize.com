@@ -38,11 +38,28 @@ This setup is designed to run Roots Bedrock on Docker with PHP, Node, MariaDB, a
 - **Composer**: Installed in the PHP container for managing PHP dependencies.
 - **Git**: Installed in the PHP container for version control.
 
+## User Configuration
+
+The `www-data` user is properly configured in the PHP container:
+- UID set to 1000 for host system compatibility
+- Shell set to /bin/bash for interactive use
+- Home directory at /var/www
+- Sudo access for WP-CLI commands
+- Can be accessed via `su - www-data` for non-root operations
+
 ## Usage
 
 - To access the PHP container:
   ```sh
   docker-compose exec php bash
+  ```
+- To switch to www-data user:
+  ```sh
+  su - www-data
+  ```
+- To run WP-CLI as www-data:
+  ```sh
+  wp-cli <command>
   ```
 - To access the Node container:
   ```sh
