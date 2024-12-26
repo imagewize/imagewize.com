@@ -26,7 +26,9 @@ RUN \
   # mysqli
     # build and install using built-in docker script
     docker-php-ext-configure mysqli && \
-    docker-php-ext-install -j$(nproc) mysqli && \
+    docker-php-ext-install -j$(nproc) mysqli
+
+RUN \
   # sodium
     # already built in and enabled
   # openssl
@@ -44,7 +46,9 @@ RUN \
     # @see https://github.com/Imagick/imagick/issues/358#issuecomment-768586107
     mkdir -p /usr/src/php/ext/imagick && \
     curl -fsSL https://github.com/Imagick/imagick/archive/06116aa24b76edaf6b1693198f79e6c295eda8a9.tar.gz | tar xvz -C "/usr/src/php/ext/imagick" --strip 1 && \
-    docker-php-ext-install imagick && \
+    docker-php-ext-install imagick
+
+RUN \
   # xml
     # already built in and enabled
   # zip
@@ -55,7 +59,9 @@ RUN \
              --no-install-recommends && \
     # build and install using built-in docker script
     docker-php-ext-install -j$(nproc) zip && \
-    docker-php-ext-enable zip && \
+    docker-php-ext-enable zip
+
+RUN \
 # fallback extensions
   # filter
     # already built in and enabled
@@ -71,7 +77,9 @@ RUN \
     # build and install using built-in docker script
     docker-php-ext-configure gd \
              --with-freetype --with-jpeg && \
-    docker-php-ext-install -j$(nproc) gd && \
+    docker-php-ext-install -j$(nproc) gd
+
+RUN \
   # iconv
     # already built in and enabled
   # mcrypt
@@ -82,21 +90,33 @@ RUN \
              --no-install-recommends && \
     # build and install using PECL (version 1.0.4)
     pecl install -o -f mcrypt-1.0.4 && \
-    docker-php-ext-enable mcrypt && \
+    docker-php-ext-enable mcrypt
+
+RUN \
   # simplexml
     # already built in and enabled
   # xmlreader
     # already built in and enabled
   # zlib
     # already built in and enabled
-# Trellis additional/differing extensions
+  # Trellis additional/differing extensions
   # opcache
     # build and install using built-in docker script
     docker-php-ext-configure opcache && \
-    docker-php-ext-install -j$(nproc) opcache && \
+    docker-php-ext-install -j$(nproc) opcache
+
+# Install Composer and unzip
+RUN \
+    apt-get update && \
+    apt-get install -y unzip --no-install-recommends && \
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+    ln -s /usr/local/bin/composer /usr/local/bin/php-composer && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 # Extra clean ups
-apt-get clean && \
-rm -rf /var/lib/apt/lists/*
+RUN apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 # For Bedrock
 WORKDIR /srv/www/web
