@@ -9,6 +9,12 @@ web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
 
+# Container
+web/.cache
+web/.yarn
+web/.composer
+web/.wp-cli
+
 # Database data
 imwz_2024-11-14.sql
 
