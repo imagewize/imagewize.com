@@ -105,10 +105,10 @@ RUN \
     docker-php-ext-configure opcache && \
     docker-php-ext-install -j$(nproc) opcache
 
-# Install Composer and unzip
+# Install Composer, unzip, and git
 RUN \
     apt-get update && \
-    apt-get install -y unzip --no-install-recommends && \
+    apt-get install -y unzip git --no-install-recommends && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     ln -s /usr/local/bin/composer /usr/local/bin/php-composer && \
     apt-get clean && \
