@@ -1,8 +1,11 @@
 FROM php:8.3.13-fpm-bookworm
 
-# Permissions fix (important)
-# (see https://github.com/docker/docker/issues/2259)
-RUN usermod -u 1000 www-data
+# Set up www-data user properly
+RUN usermod -u 1000 www-data && \
+    usermod -s /bin/bash www-data && \
+    mkdir -p /var/www && \
+    chown www-data:www-data /var/www && \
+    usermod -d /var/www www-data
 
 # PHP extensions for WordPress
 RUN \
@@ -87,10 +90,13 @@ RUN \
     apt-get update && \
     apt-get install -y \
                libmcrypt-dev \
+               git \
              --no-install-recommends && \
-    # build and install using PECL (version 1.0.4)
-    pecl install -o -f mcrypt-1.0.4 && \
-    docker-php-ext-enable mcrypt
+    # build and install from source
+    mkdir -p /usr/src/php/ext/mcrypt && \
+    curl -fsSL https://github.com/php/pecl-encryption-mcrypt/archive/master.tar.gz | tar xvz -C "/usr/src/php/ext/mcrypt" --strip 1 && \
+    docker-php-ext-configure mcrypt && \
+    docker-php-ext-install mcrypt
 
 RUN \
   # simplexml
@@ -110,9 +116,31 @@ RUN \
     apt-get update && \
     apt-get install -y unzip git --no-install-recommends && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
-    ln -s /usr/local/bin/composer /usr/local/bin/php-composer && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    ln -s /usr/local/bin/composer /usr/local/bin/php-composer
+
+# Install WP-CLI
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
+    chmod +x wp-cli.phar && \
+    mv wp-cli.phar /usr/local/bin/wp && \
+    # Create wp-cli directory for www-data user
+    mkdir -p /var/www/.wp-cli && \
+    chown www-data:www-data /var/www/.wp-cli
+
+# Create WP-CLI wrapper script to run as www-data
+RUN echo '#!/bin/sh' > /usr/local/bin/wp-cli && \
+    echo 'su -s /bin/bash www-data -c "wp $*"' >> /usr/local/bin/wp-cli && \
+    chmod +x /usr/local/bin/wp-cli
+
+# Install required tools
+RUN apt-get update && \
+    apt-get install -y \
+        sudo \
+        less \
+    --no-install-recommends
+
+# Configure sudo for www-data
+RUN echo "www-data ALL=(ALL) NOPASSWD: /usr/local/bin/wp" >> /etc/sudoers.d/wp-cli && \
+    chmod 0440 /etc/sudoers.d/wp-cli
 
 # Extra clean ups
 RUN apt-get clean && \
