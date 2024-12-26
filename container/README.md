@@ -43,7 +43,7 @@ This setup is designed to run Roots Bedrock on Docker with PHP, Node, MariaDB, a
 The `www-data` user is properly configured in the PHP container:
 - UID set to 1000 for host system compatibility
 - Shell set to /bin/bash for interactive use
-- Home directory at /var/www
+- Home directory at /srv/www/web (matches Bedrock application directory)
 - Sudo access for WP-CLI commands
 - Can be accessed via `su - www-data` for non-root operations
 

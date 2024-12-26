@@ -3,9 +3,9 @@ FROM php:8.3.13-fpm-bookworm
 # Set up www-data user properly
 RUN usermod -u 1000 www-data && \
     usermod -s /bin/bash www-data && \
-    mkdir -p /var/www && \
-    chown www-data:www-data /var/www && \
-    usermod -d /var/www www-data
+    mkdir -p /srv/www/web && \
+    chown www-data:www-data /srv/www/web && \
+    usermod -d /srv/www/web www-data
 
 # PHP extensions for WordPress
 RUN \
