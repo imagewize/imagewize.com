@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.e-content p {
+  @apply font-open-sans text-lg leading-relaxed text-gray-500;
+}
 
 /** 
  * typography
