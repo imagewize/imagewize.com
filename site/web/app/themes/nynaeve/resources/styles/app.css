@@ -2,3 +2,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/** 
+ * typography
+ * -
+ */
+
+
+.e-content input,
+.e-content textarea,
+.e-content select,
+.e-content pre,
+.e-content blockquote,
+.e-content figure,
+.e-content table,
+.e-content p,
+.e-content ul,
+.e-content ol,
+.e-content dl,
+.e-content form {
+  @apply mb-12;  /* This replaces margin-bottom: $base-line-height */
+}
+
+/**
+* Code
+*/
+
+code {
+  @apply text-xs whitespace-nowrap bg-gray-100 font-menlo;
+}
+
+pre > code {
+  @apply block whitespace-pre leading-4;
+}
+
+.wp-block-code {
+  @apply m-5 rounded-md bg-gray-100 pt-10 px-12 pb-12;
+}
+

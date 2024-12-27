@@ -1,6 +1,6 @@
-<article @php(post_class('h-entry'))>
+<article @php(post_class('h-entry container mx-auto'))>
   <header>
-    <h1 class="p-name">
+    <h1 class="p-name font-open-sans font-semibold text-2xl text-black mb-8 antialiased">
       {!! $title !!}
     </h1>
 
