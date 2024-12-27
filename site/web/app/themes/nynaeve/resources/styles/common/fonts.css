@@ -47,3 +47,12 @@
     font-weight: 800;
     src: url('@fonts/open-sans-v40-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+  
+/* menlo-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Menlo';
+    font-style: normal;
+    font-weight: 400;
+    src: url('@fonts/menlo-regular-webfont.woff2') format('woff2');
+}
