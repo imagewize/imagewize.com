@@ -14,7 +14,8 @@ const config = {
         footerText: '#465166',
       },
       fontFamily: {
-        'open-sans': 'Open Sans, sans-serif',
+        'open-sans': 'Open Sans, sans-serif', 
+        'menlo': 'Menlo, monospace',
       },
     },
   },

@@ -1333,6 +1333,11 @@
           "fontFamily": "Open Sans, sans-serif",
           "name": "Open Sans",
           "slug": "open-sans"
+        },
+        {
+          "fontFamily": "Menlo, monospace",
+          "name": "Menlo",
+          "slug": "menlo"
         }
       ],
       "fontSizes": [
