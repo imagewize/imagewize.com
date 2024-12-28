@@ -44,3 +44,7 @@ pre > code {
   @apply my-5 rounded-md bg-gray-100 pt-10 px-12 pb-12;
 }
 
+.page h2 {
+  @apply text-xl font-semibold text-black my-6;
+}
+
