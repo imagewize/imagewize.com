@@ -25,7 +25,7 @@
 .e-content ol,
 .e-content dl,
 .e-content form {
-  @apply mb-12;  /* This replaces margin-bottom: $base-line-height */
+  @apply mb-3;  /* This replaces margin-bottom: $base-line-height 0.75 rem */
 }
 
 /**
@@ -41,6 +41,6 @@ pre > code {
 }
 
 .wp-block-code {
-  @apply m-5 rounded-md bg-gray-100 pt-10 px-12 pb-12;
+  @apply my-5 rounded-md bg-gray-100 pt-10 px-12 pb-12;
 }
 
