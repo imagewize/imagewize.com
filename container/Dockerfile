@@ -42,14 +42,24 @@ RUN \
     # install build dependencies
     apt-get update && \
     apt-get install -y \
-               libmagickwand-dev \
-               ghostscript \
-             --no-install-recommends && \
-    # build and install using workaround
-    # @see https://github.com/Imagick/imagick/issues/358#issuecomment-768586107
-    mkdir -p /usr/src/php/ext/imagick && \
-    curl -fsSL https://github.com/Imagick/imagick/archive/06116aa24b76edaf6b1693198f79e6c295eda8a9.tar.gz | tar xvz -C "/usr/src/php/ext/imagick" --strip 1 && \
-    docker-php-ext-install imagick
+        libmagickwand-dev \
+        ghostscript \
+        imagemagick \
+        libmagickcore-dev \
+        --no-install-recommends && \
+    # Install specific stable imagick version compatible with PHP 8.3
+    pecl install imagick-3.7.0 && \
+    docker-php-ext-enable imagick && \
+    # Verify imagick installation
+    php -m | grep imagick && \
+    # Configure policy to allow PDF operations
+    { \
+        echo '<?xml version="1.0" encoding="UTF-8"?>'; \
+        echo '<policymap>'; \
+        echo '  <policy domain="coder" rights="read|write" pattern="PDF" />'; \
+        echo '  <policy domain="coder" rights="read|write" pattern="LABEL" />'; \
+        echo '</policymap>'; \
+    } > /etc/ImageMagick-6/policy.xml
 
 RUN \
   # xml
@@ -123,8 +133,8 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
     chmod +x wp-cli.phar && \
     mv wp-cli.phar /usr/local/bin/wp && \
     # Create wp-cli directory for www-data user
-    mkdir -p /var/www/.wp-cli && \
-    chown www-data:www-data /var/www/.wp-cli
+    mkdir -p /srv/www/.wp-cli && \
+    chown www-data:www-data /srv/www/.wp-cli
 
 # Create WP-CLI wrapper script to run as www-data
 RUN echo '#!/bin/sh' > /usr/local/bin/wp-cli && \
