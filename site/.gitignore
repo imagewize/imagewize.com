@@ -9,12 +9,6 @@ web/app/uploads/*
 !web/app/uploads/.gitkeep
 web/app/cache/*
 
-# Container
-web/.cache
-web/.yarn
-web/.composer
-web/.wp-cli
-
 # Database data
 imwz_2024-11-14.sql
 
@@ -39,3 +33,14 @@ wp-cli.local.yml
 
 # trellis database uploads migration
 database_backup/*
+
+# ACF
+auth.json
+
+
+# Docker 
+# .lesshst
+# .bash_history
+# .cache
+# .composer
+# .yarn

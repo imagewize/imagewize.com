@@ -1,7 +1,3 @@
 # macOS system files
 .DS_Store
 **/.DS_Store
-# ACF Pro 
-site/auth.json
-site/web/.bash_history
-site/web/.lesshst
