@@ -1,11 +1,11 @@
-<article @php(post_class('grid grid-cols-10 gap-4 mb-12'))>
+<article @php(post_class('grid grid-cols-12 gap-4 mb-12'))>
   <div class="col-span-2 flex justify-center items-start pt-2">
     <div class="rounded-full overflow-hidden w-24 h-24 border-8 border-borderGray">
       {!! get_avatar(get_the_author_meta('ID'), 96, '', '', ['class' => 'w-full h-full object-cover']) !!}
     </div>
   </div>
 
-  <div class="col-span-2">
+  <div class="col-span-3">
     <header>
       <h2 class="entry-title text-2xl font-open-sans font-bold text-black">
         <a href="{{ get_permalink() }}">
@@ -20,7 +20,7 @@
     @php(the_excerpt())
   </div>
 
-  <div class="col-span-2 flex items-start justify-center pt-2">
+  <div class="col-span-3 flex items-start justify-center pt-2">
     <a href="{{ get_permalink() }}" class="inline-block px-4 py-2 text-gray-800 font-open-sans font-bold text-xl 
     uppercase tracking-wide border-b-4 border-gray-400">
       Read More
