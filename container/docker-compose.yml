@@ -23,7 +23,7 @@ services:
       - ../site:/srv/www
       - ./nginx/config/app.conf:/etc/nginx/conf.d/default.conf
     ports:
-      - "8080:80"
+      - "80:80"
     networks:
       - app-network
     depends_on:
@@ -54,11 +54,13 @@ services:
     environment:
       - PATH=/usr/local/node/bin:/usr/local/volta/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
       - VOLTA_HOME=/usr/local/volta
+      - HOST=127.0.0.1
+      # This port informs our dev server to listen on port 3000
+      - PORT=3000
+    network_mode: host
+    working_dir: /srv/www/web/app/themes/nynaeve
     tty: true
     stdin_open: true
-    command: tail -f /dev/null
-    networks:
-      - app-network
 
 volumes:
   node_binaries:
