@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .e-content p {
   @apply font-open-sans text-lg leading-relaxed text-gray-500;
 }
@@ -60,4 +61,16 @@ pre > code {
   @apply text-xl font-semibold text-black my-6;
 }
 
+/**
+ * Gravity Forms
+ *
+ * This is a custom style for Gravity Forms on top of theme styling in
+ * block editor using the Orbital theme.
+ */
 
+ 	
+body .gform_wrapper .gform_body .gform_fields .gfield input,
+body .gform_wrapper .gform_body .gform_fields .gfield textarea {
+  @apply block w-full p-6 text-gray-900 border border-gray-300 rounded-lg 
+  bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500;
+}
