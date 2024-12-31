@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81375d4491b6382c489e645eaeccd83b",
+    "content-hash": "5bb81bda44e730bc701cc578069a0595",
     "packages": [
         {
             "name": "blade-ui-kit/blade-icons",
@@ -582,6 +582,56 @@
                 }
             ],
             "time": "2023-10-12T05:21:21+00:00"
+        },
+        {
+            "name": "generoi/sage-woocommerce",
+            "version": "v1.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/generoi/sage-woocommerce.git",
+                "reference": "827339655ddcb98da90b2be3c62cd335043546cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/generoi/sage-woocommerce/zipball/827339655ddcb98da90b2be3c62cd335043546cd",
+                "reference": "827339655ddcb98da90b2be3c62cd335043546cd",
+                "shasum": ""
+            },
+            "require": {
+                "roots/acorn": "*"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "acorn": {
+                    "providers": [
+                        "Genero\\Sage\\WooCommerce\\WooCommerceServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Genero\\Sage\\WooCommerce\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oskar Schöldström",
+                    "email": "public@oxy.fi"
+                }
+            ],
+            "homepage": "https://github.com/generoi/sage-woocommerce",
+            "support": {
+                "issues": "https://github.com/generoi/sage-woocommerce/issues",
+                "source": "https://github.com/generoi/sage-woocommerce/tree/v1.1.3"
+            },
+            "time": "2024-03-18T15:10:41+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -6049,16 +6099,16 @@
     "packages-dev": [
         {
             "name": "laravel/pint",
-            "version": "v1.18.3",
+            "version": "v1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "cef51821608239040ab841ad6e1c6ae502ae3026"
+                "reference": "8169513746e1bac70c85d6ea1524d9225d4886f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/cef51821608239040ab841ad6e1c6ae502ae3026",
-                "reference": "cef51821608239040ab841ad6e1c6ae502ae3026",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/8169513746e1bac70c85d6ea1524d9225d4886f0",
+                "reference": "8169513746e1bac70c85d6ea1524d9225d4886f0",
                 "shasum": ""
             },
             "require": {
@@ -6069,10 +6119,10 @@
                 "php": "^8.1.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.65.0",
-                "illuminate/view": "^10.48.24",
-                "larastan/larastan": "^2.9.11",
-                "laravel-zero/framework": "^10.4.0",
+                "friendsofphp/php-cs-fixer": "^3.66.0",
+                "illuminate/view": "^10.48.25",
+                "larastan/larastan": "^2.9.12",
+                "laravel-zero/framework": "^10.48.25",
                 "mockery/mockery": "^1.6.12",
                 "nunomaduro/termwind": "^1.17.0",
                 "pestphp/pest": "^2.36.0"
@@ -6111,7 +6161,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2024-11-26T15:34:00+00:00"
+            "time": "2024-12-30T16:20:10+00:00"
         }
     ],
     "aliases": [],
