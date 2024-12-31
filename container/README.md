@@ -12,9 +12,27 @@ This setup is designed to run Roots Bedrock on Docker with PHP, Node, MariaDB, a
 1. Copy the `.env` file in this directory into the `site/` directory.
 2. Navigate to the `container` directory.
 3. Build and start the Docker Compose setup:
-   ```sh
-   docker-compose up -d
-   ```
+
+```sh
+docker-compose up -d
+```
+
+example output
+```sh
+jasper@raspberrypi:~/code/imagewize.com/container $ docker compose up -d
+[+] Running 5/5
+ ✔ Network container_app-network  Creat...                                 0.2s 
+ ✔ Container container-node-1     Started                                  1.5s 
+ ✔ Container container-db-1       Started                                  1.7s 
+ ✔ Container container-php-1      Started                                  1.3s 
+ ✔ Container container-nginx-1    Started                                  1.9s
+jasper@raspberrypi:~/code/imagewize.com/container $ docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+NAMES               STATUS         PORTS
+container-nginx-1   Up 2 minutes   0.0.0.0:80->80/tcp, :::80->80/tcp
+container-php-1     Up 2 minutes   9000/tcp
+container-node-1    Up 2 minutes   
+container-db-1      Up 2 minutes   0.0.0.0:3307->3306/tcp, [::]:3307->3306/tcp
+```
 
 ## Services
 
