@@ -81,7 +81,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
 }
 
 .single-product .price {
-  @apply font-open-sans font-semibold text-2xl leading-9 text-gray-900 pr-5 sm:border-r border-gray-200 mr-5;
+  @apply font-open-sans font-semibold text-2xl leading-9 text-gray-900 pr-5 mr-5;
 }
 
 .single-product .woocommerce-product-details__short-description {
@@ -93,7 +93,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
 }
 
 .single-product .quantity .qty {
-  @apply font-semibold text-gray-900 cursor-pointer text-lg py-[13px] px-6 w-full sm:max-w-[118px] outline-0 border-y border-gray-400 bg-transparent placeholder:text-gray-900 text-center hover:bg-gray-50;
+  @apply font-semibold text-gray-900 cursor-pointer text-lg py-[13px] px-6 w-full sm:max-w-[118px] outline-0 border-y border-gray-400 mb-4 bg-transparent placeholder:text-gray-900 text-center hover:bg-gray-50;
 }
 
 .single-product .single_add_to_cart_button {
@@ -145,13 +145,17 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
 }
 
 .single-product .prose h2 {
-  @apply text-xl font-semibold text-gray-900 mt-8 mb-4;
+  @apply text-xl font-semibold text-gray-800 mt-8 mb-4;
 }
 
 .single-product .prose p {
-  @apply mb-4  text-gray-600 font-open-sans text-base;
+  @apply mb-4  text-neutral-500 font-open-sans text-lg;
 }
 
 .single-product .prose ul {
   @apply list-disc pl-5 mb-4;
+}
+
+.single-product .prose li {
+  @apply text-neutral-500 font-open-sans text-lg;
 }

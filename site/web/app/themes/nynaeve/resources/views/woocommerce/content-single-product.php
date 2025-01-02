@@ -31,7 +31,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<section class="relative mb-10">
+<section class="image-and-short-description relative mb-10">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mx-auto max-md:px-2" id="product-<?php the_ID(); ?>" <?php wc_product_class('', $product); ?>>
     
     <div class="img">
@@ -40,7 +40,7 @@ if ( post_password_required() ) {
       </div>
     </div>
 
-    <div class="data w-full lg:pr-8 pr-0 xl:justify-start justify-center flex items-center max-lg:pb-10 xl:my-2 lg:my-5 my-0">
+    <div class="short-description data w-full lg:pr-8 pr-0 xl:justify-start justify-center flex items-start max-lg:pb-10 xl:my-2 lg:my-5 my-0">
       <div class="data w-full max-w-xl">
         <?php
           $categories = wc_get_product_category_list(get_the_ID());
