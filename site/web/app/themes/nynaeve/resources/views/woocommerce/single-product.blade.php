@@ -22,16 +22,18 @@ the readme will list any important changes.
     do_action('woocommerce_before_main_content');
   @endphp
 
-  @while(have_posts())
-    @php
-      the_post();
-      wc_get_template_part('content', 'single-product');
-    @endphp
-  @endwhile
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    @while(have_posts())
+      @php
+        the_post();
+        // This function call loads the content-single-product.php template part, which includes the product description.
+        wc_get_template_part('content', 'single-product');
+      @endphp
+    @endwhile
+  </div>
 
   @php
     do_action('woocommerce_after_main_content');
-    do_action('get_sidebar', 'shop');
     do_action('get_footer', 'shop');
   @endphp
 @endsection
