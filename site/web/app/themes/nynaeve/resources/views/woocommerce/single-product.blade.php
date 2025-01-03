@@ -22,7 +22,7 @@ the readme will list any important changes.
     do_action('woocommerce_before_main_content');
   @endphp
 
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     @while(have_posts())
       @php
         the_post();
