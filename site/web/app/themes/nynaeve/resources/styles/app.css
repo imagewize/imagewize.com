@@ -139,7 +139,9 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
   @apply max-w-none max-h-none;
 }
 
-/* WooCommerce Product Description */
+/**
+* WooCommerce Product Description 
+*/
 .single-product .prose {
   @apply text-gray-600;
 }
@@ -160,43 +162,34 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
   @apply text-neutral-500 font-open-sans text-lg;
 }
 
+/**
+ * WooCommerce Product Gallery
+ */
 .product-gallery {
-  position: relative;
-  width: 100%;
+  @apply relative w-full;
 }
 
 .gallery-main {
-  width: 100%;
-  margin-bottom: 1rem;
-  aspect-ratio: 4 / 5; /* Make the image taller */
+  @apply w-full mb-4 aspect-[4/5];
 }
 
 .gallery-main img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  @apply w-full h-auto object-cover;
 }
 
 .gallery-thumbs {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  gap: 0.5rem;
-  width: 100%;
+  @apply grid grid-cols-[repeat(auto-fill,minmax(80px,1fr))] gap-2 w-full;
 }
 
 .gallery-thumb {
-  cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.2s;
+  @apply cursor-pointer opacity-60 transition-opacity duration-200;
 }
 
 .gallery-thumb:hover,
 .gallery-thumb.active {
-  opacity: 1;
+  @apply opacity-100;
 }
 
 .gallery-thumb img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+  @apply w-full h-auto object-cover;
 }
