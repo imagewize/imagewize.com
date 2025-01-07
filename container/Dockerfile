@@ -12,6 +12,7 @@ RUN usermod -u 1000 www-data && \
 # Install all required system packages at once
 RUN apt-get update && \
     apt-get install -y \
+        mariadb-client \
         libmagickwand-dev \
         ghostscript \
         imagemagick \
