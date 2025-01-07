@@ -36,7 +36,43 @@ if ( post_password_required() ) {
     
     <div class="img">
       <div class="img-box h-full max-lg:mx-auto">
-        <?php do_action('woocommerce_before_single_product_summary'); ?>
+        <?php
+        // Remove default WooCommerce gallery
+        remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20);
+        
+        // Custom gallery implementation
+        $attachment_ids = $product->get_gallery_image_ids();
+        $main_image_id = $product->get_image_id();
+        
+        if ($main_image_id) {
+            array_unshift($attachment_ids, $main_image_id);
+        }
+        
+        if (!empty($attachment_ids)) : ?>
+          <div class="product-gallery">
+            <div class="gallery-main">
+              <?php
+              $main_image = wp_get_attachment_image_src($attachment_ids[0], 'full');
+              if ($main_image) : ?>
+                <img src="<?php echo esc_url($main_image[0]); ?>" alt="<?php echo esc_attr($product->get_name()); ?>" class="main-image">
+              <?php endif; ?>
+            </div>
+            
+            <?php if (count($attachment_ids) > 1) : ?>
+              <div class="gallery-thumbs">
+                <?php foreach ($attachment_ids as $index => $attachment_id) :
+                  $thumb = wp_get_attachment_image_src($attachment_id, 'thumbnail');
+                  $full = wp_get_attachment_image_src($attachment_id, 'full');
+                  if ($thumb && $full) : ?>
+                    <div class="gallery-thumb <?php echo $index === 0 ? 'active' : ''; ?>" data-full="<?php echo esc_url($full[0]); ?>">
+                      <img src="<?php echo esc_url($thumb[0]); ?>" alt="">
+                    </div>
+                  <?php endif;
+                endforeach; ?>
+              </div>
+            <?php endif; ?>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
 

@@ -159,3 +159,43 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
 .single-product .prose li {
   @apply text-neutral-500 font-open-sans text-lg;
 }
+
+.product-gallery {
+  position: relative;
+  width: 100%;
+}
+
+.gallery-main {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.gallery-main img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.gallery-thumb {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.gallery-thumb:hover,
+.gallery-thumb.active {
+  opacity: 1;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
