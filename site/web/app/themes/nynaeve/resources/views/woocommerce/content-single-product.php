@@ -52,9 +52,10 @@ if ( post_password_required() ) {
           <div class="product-gallery">
             <div class="gallery-main">
               <?php
-              $main_image = wp_get_attachment_image_src($attachment_ids[0], 'full');
+              $main_image = wp_get_attachment_image_src($attachment_ids[0], 'product-gallery-main');
+              $main_image_srcset = wp_get_attachment_image_srcset($attachment_ids[0], 'product-gallery-main');
               if ($main_image) : ?>
-                <img src="<?php echo esc_url($main_image[0]); ?>" alt="<?php echo esc_attr($product->get_name()); ?>" class="main-image">
+                <img src="<?php echo esc_url($main_image[0]); ?>" srcset="<?php echo esc_attr($main_image_srcset); ?>" sizes="(max-width: 768px) 100vw, 50vw" alt="<?php echo esc_attr($product->get_name()); ?>" class="main-image">
               <?php endif; ?>
             </div>
             
@@ -62,9 +63,10 @@ if ( post_password_required() ) {
               <div class="gallery-thumbs">
                 <?php foreach ($attachment_ids as $index => $attachment_id) :
                   $thumb = wp_get_attachment_image_src($attachment_id, 'thumbnail');
-                  $full = wp_get_attachment_image_src($attachment_id, 'full');
+                  $full = wp_get_attachment_image_src($attachment_id, 'product-gallery-main');
+                  $full_srcset = wp_get_attachment_image_srcset($attachment_id, 'product-gallery-main');
                   if ($thumb && $full) : ?>
-                    <div class="gallery-thumb <?php echo $index === 0 ? 'active' : ''; ?>" data-full="<?php echo esc_url($full[0]); ?>">
+                    <div class="gallery-thumb <?php echo $index === 0 ? 'active' : ''; ?>" data-full="<?php echo esc_url($full[0]); ?>" data-srcset="<?php echo esc_attr($full_srcset); ?>">
                       <img src="<?php echo esc_url($thumb[0]); ?>" alt="">
                     </div>
                   <?php endif;

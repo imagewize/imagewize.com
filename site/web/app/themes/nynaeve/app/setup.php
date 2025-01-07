@@ -100,6 +100,14 @@ add_action('after_setup_theme', function () {
 }, 20);
 
 /**
+ * Register custom image sizes.
+ */
+add_action('after_setup_theme', function () {
+    add_image_size('product-gallery-main', 800, 1000, true); // 800x1000 pixels, cropped
+    // add_image_size('product-gallery-thumb', 150, 150, true); // 150x150 pixels, cropped
+}, 20);
+
+/**
  * Register the theme sidebars.
  *
  * @return void
