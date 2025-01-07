@@ -5,35 +5,33 @@ import domReady from '@roots/sage/client/dom-ready';
  */
 domReady(async () => {
   // Product gallery
-  document.addEventListener('DOMContentLoaded', function() {
-    const gallery = document.querySelector('.product-gallery');
-    if (gallery) {
-      const mainImage = gallery.querySelector('.main-image');
-      const thumbs = gallery.querySelectorAll('.gallery-thumb');
+  const gallery = document.querySelector('.product-gallery');
+  if (gallery) {
+    const mainImage = gallery.querySelector('.main-image');
+    const thumbs = gallery.querySelectorAll('.gallery-thumb');
+    
+    if (mainImage && thumbs.length > 0) {
+      // console.log('Gallery initialized with', thumbs.length, 'thumbnails.');
       
-      if (mainImage && thumbs.length > 0) {
-        // console.log('Gallery initialized with', thumbs.length, 'thumbnails.');
-        
-        thumbs.forEach(thumb => {
-          thumb.addEventListener('click', function() {
-            const fullSrc = this.dataset.full;
-            const fullSrcset = this.dataset.srcset;
-            // console.log('Thumbnail clicked:', fullSrc);
-            mainImage.src = fullSrc;
-            mainImage.srcset = fullSrcset;
-            
-            // Update active state
-            thumbs.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-          });
+      thumbs.forEach(thumb => {
+        thumb.addEventListener('click', function() {
+          const fullSrc = this.dataset.full;
+          const fullSrcset = this.dataset.srcset;
+          // console.log('Thumbnail clicked:', fullSrc);
+          mainImage.src = fullSrc;
+          mainImage.srcset = fullSrcset;
+          
+          // Update active state
+          thumbs.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
         });
-      } else {
-        // console.error('Main image or thumbnails not found.');
-      }
+      });
     } else {
-      // console.error('Gallery not found.');
+      // console.error('Main image or thumbnails not found.');
     }
-  });
+  } else {
+    // console.error('Gallery not found.');
+  }
 });
 
 /**
