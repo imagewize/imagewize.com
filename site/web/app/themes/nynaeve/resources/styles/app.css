@@ -206,15 +206,21 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
   @apply filter brightness-75;
 }
 
+.woocommerce-products-header {
+  @apply my-4 ml-6 sm:ml-8  font-open-sans text-black font-semibold text-lg
+ }
+
 /**
- * WooCommerce Breadcrumb
+ * WooCommerce Breadcrumbs
  */
 
- .single-product .woocommerce-breadcrumb {
-  @apply my-4 ml-4 font-open-sans text-gray-500 font-semibold text-sm
+ .single-product .woocommerce-breadcrumb,
+ .post-type-archive-product .site-main .woocommerce-breadcrumb {
+  @apply my-4  ml-6 sm:ml-8 font-open-sans text-gray-500 font-semibold text-sm
  }
 
  /** Additional classes for comments */
+
 .comment-metadata {
   @apply my-2;
 }
