@@ -1,4 +1,4 @@
-<div class="flex items-center space-x-2 text-sm text-gray-500">
+<div class="flex items-center space-x-2 text-sm text-gray-500 flex-nowrap">
   <time class="dt-published" datetime="{{ get_post_time('c', true) }}">
     {{ get_the_date() }}
   </time>

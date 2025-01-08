@@ -5,7 +5,7 @@
 
 
 .e-content p {
-  @apply font-open-sans text-lg leading-relaxed text-gray-500;
+  @apply font-open-sans text-base leading-relaxed text-gray-500;
 }
 
 /** 
