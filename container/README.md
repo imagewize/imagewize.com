@@ -94,10 +94,37 @@ The `www-data` user is properly configured in the PHP container:
   ```sh
   docker compose exec node bash
   ```
+
+> Note: Currently, you need to run `yarn dev` from the Node container. This container is exposed to the host network on port 3000. This setup will be adjusted and moved to the PHP container in the future.
+
 - To access the MariaDB container:
   ```sh
   docker compose exec db bash
   ```
+
+## VS Code Configuration
+
+To satisfy VS Code's need to load the PHP executable, we have added a file at `/usr/local/bin/docker-php` with the following content:
+```sh
+#!/bin/bash
+docker exec -i container-php-1 php "$@"
+```
+
+We also made it executable using
+```sh
+sudo chmod +x /usr/local/bin/docker-php
+```
+
+This file is referred to in the VS Code settings (`~/.config/Code/User/settings.json`) as follows:
+```json
+{
+    "git.autofetch": true,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.minimap.enabled": false,
+    "php.validate.executablePath": "/usr/local/bin/docker-php"
+}
+```
 
 ## Clean Up
 
@@ -105,4 +132,3 @@ To stop and remove all containers, networks, and volumes:
 ```sh
 docker-compose down -v
 ```
-````
