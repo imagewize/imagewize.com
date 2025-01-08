@@ -170,7 +170,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
 }
 
 .gallery-main {
-  @apply w-full mb-4 aspect-[4/5];
+  @apply w-full mb-4;
 }
 
 .gallery-main img {
@@ -193,3 +193,23 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
 .gallery-thumb img {
   @apply w-full h-auto object-cover;
 }
+
+/**
+ * WooCommerce Product Archive
+ */
+
+.woocommerce ul.products li.product a img {
+  @apply transition duration-300 ease-in-out;
+}
+
+.woocommerce ul.products li.product a img:hover {
+  @apply filter brightness-75;
+}
+
+/**
+ * WooCommerce Breadcrumb
+ */
+
+ .single-product .woocommerce-breadcrumb {
+  @apply my-4 ml-4 font-open-sans text-gray-500 font-semibold text-sm
+ }
