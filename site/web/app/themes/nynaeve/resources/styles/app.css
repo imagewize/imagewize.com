@@ -213,3 +213,12 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
  .single-product .woocommerce-breadcrumb {
   @apply my-4 ml-4 font-open-sans text-gray-500 font-semibold text-sm
  }
+
+ /** Additional classes for comments */
+.comment-metadata {
+  @apply my-2;
+}
+
+.comment-author img {
+  @apply mb-4;
+}

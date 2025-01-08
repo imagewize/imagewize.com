@@ -1,11 +1,11 @@
 @if (! post_password_required())
-  <section id="comments" class="comments">
+  <section id="comments" class="comments my-4">
     @if ($responses)
       <h2>
         {!! $title !!}
       </h2>
 
-      <ol class="comment-list">
+      <ol class="comment-list my-4">
         {!! $responses !!}
       </ol>
 
