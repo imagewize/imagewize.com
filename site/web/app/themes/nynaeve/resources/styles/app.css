@@ -75,7 +75,10 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
   bg-gray-50 text-base focus:ring-blue-500 focus:border-blue-500;
 }
 
-/* WooCommerce Single Product Styles */
+/**
+ * WooCommerce Single Product Styles 
+ */
+
 .single-product .product_title {
   @apply font-open-sans font-bold text-3xl leading-10 text-gray-900 mb-2 capitalize;
 }
@@ -93,11 +96,13 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
 }
 
 .single-product .quantity .qty {
-  @apply font-semibold text-gray-900 cursor-pointer text-lg py-[13px] px-6 w-full sm:max-w-[118px] outline-0 border-y border-gray-400 mb-4 bg-transparent placeholder:text-gray-900 text-center hover:bg-gray-50;
+  @apply font-semibold text-gray-900 cursor-pointer text-lg py-[13px] px-6 w-full sm:max-w-[118px] 
+  outline-0 border-y border-gray-400 mb-4 bg-transparent placeholder:text-gray-900 text-center hover:bg-gray-50;
 }
 
 .single-product .single_add_to_cart_button {
-  @apply text-center w-full px-5 py-4 rounded-[100px] bg-indigo-600 flex items-center justify-center font-semibold text-lg text-white shadow-sm transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400;
+  @apply text-center w-full px-5 py-4 rounded-[100px] bg-indigo-600 flex items-center justify-center font-semibold text-lg 
+  text-white shadow-sm transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400;
 }
 
 .single-product .product_meta {
@@ -113,7 +118,10 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
 }
 
 
-/* WooCommerce Product Gallery */
+/**
+ * WooCommerce Product Gallery 
+*/
+
 .woocommerce-product-gallery {
   @apply relative w-full max-w-2xl mx-auto;
 }
@@ -209,6 +217,11 @@ body .gform_wrapper .gform_body .gform_fields .gfield textarea {
 .woocommerce-products-header {
   @apply my-4 ml-6 sm:ml-8  font-open-sans text-black font-semibold text-lg
  }
+
+ .post-type-archive-product .products .add_to_cart_button {
+  @apply text-center w-full px-3 py-2  bg-indigo-600 flex items-center justify-center font-semibold text-lg 
+  text-white hover:text-white shadow-sm transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400;
+}
 
 /**
  * WooCommerce Breadcrumbs
