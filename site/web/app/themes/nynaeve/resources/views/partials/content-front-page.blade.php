@@ -40,12 +40,22 @@
                     @if(have_rows('services_boxes'))
                         @while(have_rows('services_boxes'))
                             @php(the_row())
-                            <div class="bg-white p-6 rounded-lg">
-                                <span class="text-3xl text-primary-600 mb-4 block"><i class="{{ get_sub_field('text_box_icon') }}">
-                                </i></span>
-                                <div>
-                                    <h3 class="text-xl font-semibold mb-3">{{ get_sub_field('text_box_title') }}</h3>
-                                    <div class="prose text-textBodyGray font-open-sans leading-loose">{!! get_sub_field('text_box') !!}</div>
+                            <div class="service-block bg-white p-6 rounded-lg group hover:cursor-pointer">
+                                <div class="grid grid-cols-[auto_1fr] gap-4 items-start">
+                                    <span class="service-icon inline-flex p-2 text-3xl bg-blue-600 rounded-lg 
+                                    group-hover:bg-red-500 transition-colors duration-200">  
+                                       <x-dynamic-component :component="get_sub_field('text_box_icon')" class="text-white w-8 h-8" />
+                                    </span>
+                                    <h3 class="service-title text-lg text-blue-600 group-hover:text-gray-700 font-semibold relative inline-block">
+                                        <span class="relative inline-block">
+                                            {{ get_sub_field('text_box_title') }}
+                                            <span class="absolute -bottom-2 left-0 w-1/4 h-[3px] bg-gray-300 
+                                            group-hover:w-1/2 group-hover:bg-gray-700 transition-all duration-300"></span>
+                                        </span>
+                                    </h3>
+                                    <div class="service-body prose text-textBodyGray font-open-sans leading-loose col-start-2">
+                                        {!! get_sub_field('text_box') !!}
+                                    </div>
                                 </div>
                             </div>
                         @endwhile

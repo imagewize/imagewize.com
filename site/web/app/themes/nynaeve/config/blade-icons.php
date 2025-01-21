@@ -18,7 +18,7 @@ return [
         'default' => [
             'path' => 'resources/images/icons',
             'prefix' => 'icon', // Changed from 'css' to 'icon'
-            'fallback' => '',
+            'fallback' => 'b-server',
             'class' => '',
             'attributes' => [],
         ],
@@ -48,8 +48,8 @@ return [
     */
 
     'attributes' => [
-        // 'width' => 50,
-        // 'height' => 50,
+        'width' => 15,
+        'height' => 15,
     ],
 
     /*

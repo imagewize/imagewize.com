@@ -34,6 +34,9 @@ wp-cli.local.yml
 # trellis database uploads migration
 database_backup/*
 
+# manual backups
+img-*.sql
+
 # ACF
 auth.json
 
