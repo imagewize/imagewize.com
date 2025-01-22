@@ -20,7 +20,7 @@ add_filter('excerpt_length', function () {
  * @return string
  */
 add_filter('excerpt_more', function () {
-    return ;
+    return '...';
 });
 
 /**
@@ -63,6 +63,17 @@ function my_acf_json_save_point($path) {
 
     return $custom_path;
 }
+/**
+ * Set ACF JSON Load Path Location
+ *
+ * @param array $paths The default paths
+ * @return array
+ */
 add_filter('acf/settings/save_json', __NAMESPACE__ . '\\my_acf_json_save_point');
 
-// Homepage Builder
+/**
+ * Remove the required fields legend from Gravity Forms
+ * 
+ * @return string Empty string to remove the legend
+ */
+add_filter( 'gform_required_legend', '__return_empty_string' );

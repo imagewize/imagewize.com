@@ -138,3 +138,45 @@ add_action('widgets_init', function () {
 add_theme_support('wc-product-gallery-zoom');
 add_theme_support('wc-product-gallery-lightbox');
 add_theme_support('wc-product-gallery-slider');
+
+/**
+ * WooCommerce Customizations
+ * 
+ * Removes default WooCommerce price displays and add-to-cart functionality
+ * since this site operates on a quote-based system rather than direct sales.
+ * 
+ * 1. Removes price display from single product pages and archive pages
+ * 2. Removes add-to-cart buttons from single product pages and archive pages
+ * 3. Adds a "Request Quote" button to single product pages only
+ * 4. Redirects users away from cart/checkout pages since they're not needed
+ */
+
+// Remove price and add to cart functionality from all product displays
+add_action('init', function() {
+    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
+    remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10);
+    remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
+});
+
+// Add "Request Quote" button to single product pages only
+add_action('woocommerce_single_product_summary', function() {
+    ?>
+     <div class="quote-button-wrapper mt68">
+         <a href="/contact-us" 
+            class="text-center w-full px-4 py-3 bg-indigo-600 flex items-center 
+           justify-center font-semibold text-lg text-white shadow-sm transition-all 
+           duration-500 hover:bg-indigo-700 hover:shadow-indigo-400;">
+             Request Quote
+         </a>
+     </div>
+     <?php
+}, 30);
+
+// Redirect users from cart and checkout pages since they're not needed
+add_action('template_redirect', function() {
+    if (is_cart() || is_checkout()) {
+        wp_redirect(home_url());
+        exit;
+    }
+});
