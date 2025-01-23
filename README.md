@@ -35,4 +35,9 @@ This repository contains the complete setup for imagewize.com, built using the m
 2. Follow the setup instructions in the respective component READMEs:
    - For server setup: [Trellis README](trellis/README.md)
    - For WordPress setup: [Bedrock README](site/README.md)
+3. Alternatively, you can also use Lando for local development:
+   - We rely on the default Roots `.lando.yml` config, but may update it to use Nginx and other tweaks
+   - This works well on Linux or any other platform
+   - For theme development, run yarn commands locally (e.g. `yarn dev`, `yarn build`)
+   - Other commands like wp or composer can be run with `lando wp` or `lando composer`
 
