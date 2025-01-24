@@ -34,7 +34,7 @@ export default async (app) => {
    */
   app
     .setUrl('http://localhost:3000')
-    .setProxyUrl('http://imagewize.test')
+    .setProxyUrl('https://imagewize.lndo.site')
     .watch(['resources/views', 'app']);
 
   /**
