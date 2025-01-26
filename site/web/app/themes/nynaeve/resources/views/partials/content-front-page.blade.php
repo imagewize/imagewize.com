@@ -74,7 +74,12 @@
                                     @php(the_row())
                                     @php($slideImage = get_sub_field('slide_image'))
                                     <div class="swiper-slide text-center p-4">
-                                        <img src="{{ $slideImage['url'] }}" alt="{{ $slideImage['alt'] }}" class="mx-auto mb-4 w-full h-48 object-cover rounded-lg"/>
+                                        <img src="{{ wp_get_attachment_image_url($slideImage['ID'], 'portfolio-slide') }}" 
+                                             srcset="{{ wp_get_attachment_image_srcset($slideImage['ID'], 'portfolio-slide') }}"
+                                             sizes="(max-width: 768px) 100vw, 800px"
+                                             alt="{{ $slideImage['alt'] }}" 
+                                             class="mx-auto mb-4 w-full h-auto object-cover rounded-lg"
+                                             loading="lazy"/>
                                         <h3 class="text-lg font-semibold">{{ get_sub_field('slide_title') }}</h3>
                                     </div>
                                 @endwhile

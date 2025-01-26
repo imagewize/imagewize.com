@@ -104,7 +104,7 @@ add_action('after_setup_theme', function () {
  */
 add_action('after_setup_theme', function () {
     add_image_size('product-gallery-main', 800, 1000, true); // 800x1000 pixels, cropped
-    // add_image_size('product-gallery-thumb', 150, 150, true); // 150x150 pixels, cropped
+    add_image_size('portfolio-slide', 800, 500, true); // 16:10 aspect ratio, good for both desktop and mobile
 }, 20);
 
 /**
