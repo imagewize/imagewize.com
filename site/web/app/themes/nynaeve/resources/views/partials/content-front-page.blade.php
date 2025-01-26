@@ -66,9 +66,9 @@
         @elseif(get_row_layout() == 'portfolio_slider')
             <section id="portfolio" class="py-16 bg-white">
                 <div class="container mx-auto max-w-5xl px-4">
-                    <h2 class="text-3xl font-bold text-center mb-8">{{ get_sub_field('portfolio_slider_title') }}</h2>
+                    <h2 class="text-3xl font-bold font-open-sans text-center mb-8">{{ get_sub_field('portfolio_slider_title') }}</h2>
                     @if(have_rows('portfolio_slides'))
-                        <div class="swiper-container">
+                        <div class="portfolio-slider swiper-container relative">
                             <div class="swiper-wrapper">
                                 @while(have_rows('portfolio_slides'))
                                     @php(the_row())
@@ -80,10 +80,10 @@
                                 @endwhile
                             </div>
                             <!-- Add Pagination -->
-                            <div class="swiper-pagination"></div>
+                            <div class="portfolio-slider-pagination flex justify-center mt-6"></div>
                             <!-- Add Navigation -->
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
+                            <div class="portfolio-slider-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer"></div>
+                            <div class="portfolio-slider-next absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer"></div>
                         </div>
                     @endif
                 </div>

@@ -260,7 +260,7 @@
                 },
                 "layout_6795901dcd22b": {
                     "key": "layout_6795901dcd22b",
-                    "name": "portfolio_silder",
+                    "name": "portfolio_slider",
                     "label": "Portfolio Slider",
                     "display": "block",
                     "sub_fields": [
@@ -583,5 +583,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737855784
+    "modified": 1737860898
 }
