@@ -63,6 +63,32 @@
                 </div>
             </section>
 
+        @elseif(get_row_layout() == 'portfolio_slider')
+            <section id="portfolio" class="py-16 bg-white">
+                <div class="container mx-auto max-w-5xl px-4">
+                    <h2 class="text-3xl font-bold text-center mb-8">{{ get_sub_field('portfolio_slider_title') }}</h2>
+                    @if(have_rows('portfolio_slides'))
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                @while(have_rows('portfolio_slides'))
+                                    @php(the_row())
+                                    @php($slideImage = get_sub_field('slide_image'))
+                                    <div class="swiper-slide text-center p-4">
+                                        <img src="{{ $slideImage['url'] }}" alt="{{ $slideImage['alt'] }}" class="mx-auto mb-4 w-full h-48 object-cover rounded-lg"/>
+                                        <h3 class="text-lg font-semibold">{{ get_sub_field('slide_title') }}</h3>
+                                    </div>
+                                @endwhile
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Navigation -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    @endif
+                </div>
+            </section>
+
         @elseif(get_row_layout() == 'cta_banner')
             <section id="CTA" class="py-16 bg-ctaBlue text-white">
                 <div class="container mx-auto max-w-2xl px-4 text-center">
