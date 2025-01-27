@@ -1,0 +1,43 @@
+name: imagewize
+recipe: wordpress
+config:
+  php: '8.2'
+  composer_version: 2-latest
+  via: nginx
+  webroot: ./site/web
+  database: mariadb
+  xdebug: true
+proxy:
+  appserver_nginx:
+    - imagewize.lndo.site # default
+    - imagewize.test # for testing
+  phpmyadmin:
+    - pma.imagewize.lndo.site # default
+    - pma.imagewize.test # for testing
+  mailhog:
+    - mail.imagewize.lndo.site # default
+    - mail.imagewize.test # for testing
+services:
+  appserver:
+    type: php:8.2 # Bedrock requires PHP >= 8.0
+  database:
+    type: mariadb
+    portforward: 3306
+  phpmyadmin:
+    type: phpmyadmin
+    hosts:
+      - database
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver_nginx
+  dev:
+    type: node:16
+tooling:
+  npm:
+    service: dev
+  yarn:
+    service: dev
+excludes:
+  - vendor
+  - node_modules
