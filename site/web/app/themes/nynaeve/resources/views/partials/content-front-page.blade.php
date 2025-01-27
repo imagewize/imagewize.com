@@ -73,14 +73,21 @@
                                 @while(have_rows('portfolio_slides'))
                                     @php(the_row())
                                     @php($slideImage = get_sub_field('slide_image'))
-                                    <div class="swiper-slide text-center p-4">
-                                        <img src="{{ wp_get_attachment_image_url($slideImage['ID'], 'portfolio-slide') }}" 
-                                             srcset="{{ wp_get_attachment_image_srcset($slideImage['ID'], 'portfolio-slide') }}"
-                                             sizes="(max-width: 768px) 100vw, 800px"
-                                             alt="{{ $slideImage['alt'] }}" 
-                                             class="mx-auto mb-4 w-full h-auto object-cover rounded-lg"
-                                             loading="lazy"/>
-                                        <h3 class="text-lg font-semibold">{{ get_sub_field('slide_title') }}</h3>
+                                    @php($slideUrl = get_sub_field('slide_url'))
+                                    <div class="swiper-slide text-center p-4 hover:opacity-90 transition-opacity">
+                                        @if($slideUrl)
+                                            <a href="{{ $slideUrl }}" class="block cursor-pointer" {{ Str::startsWith($slideUrl, 'http') ? 'target="_blank" rel="noopener"' : '' }}>
+                                        @endif
+                                            <img src="{{ wp_get_attachment_image_url($slideImage['ID'], 'portfolio-slide') }}" 
+                                                 srcset="{{ wp_get_attachment_image_srcset($slideImage['ID'], 'portfolio-slide') }}"
+                                                 sizes="(max-width: 768px) 100vw, 800px"
+                                                 alt="{{ $slideImage['alt'] }}" 
+                                                 class="mx-auto mb-4 w-full h-auto object-cover rounded-lg"
+                                                 loading="lazy"/>
+                                            <h3 class="text-lg font-semibold">{{ get_sub_field('slide_title') }}</h3>
+                                        @if($slideUrl)
+                                            </a>
+                                        @endif
                                     </div>
                                 @endwhile
                             </div>
