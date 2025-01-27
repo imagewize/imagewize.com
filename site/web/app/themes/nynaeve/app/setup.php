@@ -174,9 +174,12 @@ add_action('woocommerce_single_product_summary', function() {
 }, 30);
 
 // Redirect users from cart and checkout pages since they're not needed
-add_action('template_redirect', function() {
-    if (is_cart() || is_checkout()) {
-        wp_redirect(home_url());
-        exit;
-    }
-});
+// WooCommerce check to avoid error on environment change
+if (function_exists('WC')) {
+    add_action('template_redirect', function() {
+        if (is_cart() || is_checkout()) {
+            wp_redirect(home_url());
+            exit;
+        }
+    });
+}
