@@ -18,8 +18,6 @@ proxy:
     - mail.imagewize.lndo.site # default
     - mail.imagewize.test # for testing
 services:
-  appserver:
-    type: php:8.2 # Bedrock requires PHP >= 8.0
   database:
     type: mariadb
     portforward: 3306
@@ -31,13 +29,4 @@ services:
     type: mailhog
     hogfrom:
       - appserver_nginx
-  dev:
-    type: node:16
-tooling:
-  npm:
-    service: dev
-  yarn:
-    service: dev
-excludes:
-  - vendor
-  - node_modules
+  
