@@ -1311,6 +1311,11 @@
         "vh"
       ]
     },
+    "layout": {
+      "contentSize": "55rem",
+      "wideSize": "64rem",
+      "fullSize": "100%"
+    },
     "typography": {
       "customFontSize": false,
       "fontFamilies": [

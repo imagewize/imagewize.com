@@ -14,7 +14,7 @@
     @endwhile
 @endif
 
-<div class="container mx-auto max-w-5xl my-16 font-open-sans text-textBodyGray text-base leading-loose">
+<div class="page-container my-16 font-open-sans text-textBodyGray text-base leading-loose">
   @php(the_content())
 
   @if ($pagination)

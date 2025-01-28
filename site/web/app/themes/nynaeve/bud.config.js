@@ -71,6 +71,11 @@ export default async (app) => {
         margin: true,
         units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
       },
+      layout: {
+        contentSize: '55rem',
+        wideSize: '64rem',
+        fullSize: '100%',
+      },
       typography: {
         customFontSize: false,
       },
