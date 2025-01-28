@@ -64,7 +64,7 @@
             </section>
 
         @elseif(get_row_layout() == 'portfolio_slider')
-            <section id="portfolio" class="py-16 bg-white">
+            <section id="portfolio" class="py-16 bg-white overflow-x-hidden">
                 <div class="container mx-auto max-w-5xl px-4">
                     <h2 class="text-3xl font-bold font-open-sans text-center mb-8">{{ get_sub_field('portfolio_slider_title') }}</h2>
                     @if(have_rows('portfolio_slides'))
