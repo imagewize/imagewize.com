@@ -140,9 +140,8 @@ class Navigation extends Block
      */
     public $example = [
         'items' => [
-            ['item' => 'Item one'],
-            ['item' => 'Item two'],
-            ['item' => 'Item three'],
+            ['page' => 2], // Assumes page ID 2 exists (usually the sample page)
+            ['page' => 1], // Assumes page ID 1 exists (usually the homepage)
         ],
     ];
 
