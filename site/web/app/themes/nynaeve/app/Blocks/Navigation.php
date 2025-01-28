@@ -47,7 +47,7 @@ class Navigation extends Block
      *
      * @var array
      */
-    public $post_types = ['post', 'page'];
+    public $post_types = [];
 
     /**
      * The parent block type allow list.
@@ -147,13 +147,13 @@ class Navigation extends Block
     ];
 
     /**
-     * The block template.
+     * Allowed blocks within this block
      *
      * @var array
      */
-    public $template = [
-        'core/heading' => ['placeholder' => 'Hello World'],
-        'core/paragraph' => ['placeholder' => 'Welcome to the Navigation block.'],
+    public $allowedBlocks = [
+        'core/heading',
+        'core/navigation',
     ];
 
     /**
@@ -163,6 +163,7 @@ class Navigation extends Block
     {
         return [
             'items' => $this->items(),
+            'allowedBlocks' => $this->allowedBlocks,
         ];
     }
 
@@ -175,7 +176,11 @@ class Navigation extends Block
 
         $fields
             ->addRepeater('items')
-                ->addText('item')
+                ->addPostObject('page', [
+                    'label' => 'Page',
+                    'post_type' => ['page'],
+                    'return_format' => 'id',
+                ])
             ->endRepeater();
 
         return $fields->build();

@@ -2,7 +2,9 @@
   @if ($items)
     <ul>
       @foreach ($items as $item)
-        <li>{{ $item['item'] }}</li>
+        @if (isset($item['page']))
+          <li><a href="{{ get_permalink($item['page']) }}">{{ get_the_title($item['page']) }}</a></li>
+        @endif
       @endforeach
     </ul>
   @else
@@ -10,6 +12,6 @@
   @endif
 
   <div>
-    <InnerBlocks template="{{ $block->template }}" />
+    <InnerBlocks allowedBlocks="{{ json_encode($allowedBlocks) }}" />
   </div>
 </div>
