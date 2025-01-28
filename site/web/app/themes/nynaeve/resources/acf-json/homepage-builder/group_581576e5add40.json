@@ -354,6 +354,24 @@
                                     "prepend": "",
                                     "append": "",
                                     "parent_repeater": "field_6795901dcd22d"
+                                },
+                                {
+                                    "key": "field_679870e8f9f6c",
+                                    "label": "Slide Link",
+                                    "name": "slide_url",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "url",
+                                    "allow_in_bindings": 0,
+                                    "parent_repeater": "field_6795901dcd22d"
                                 }
                             ]
                         }
@@ -583,5 +601,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737860898
+    "modified": 1738043902
 }
