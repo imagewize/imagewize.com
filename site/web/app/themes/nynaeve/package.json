@@ -22,5 +22,8 @@
     "@roots/bud": "^6.24.0",
     "@roots/bud-tailwindcss": "^6.24.0",
     "@roots/sage": "^6.24.0"
+  },
+  "dependencies": {
+    "swiper": "^11.2.1"
   }
 }
