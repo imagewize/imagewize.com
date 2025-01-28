@@ -3,7 +3,7 @@
     <ul>
       @foreach ($items as $item)
         @if (isset($item['page']))
-          <li><a href="{{ get_permalink($item['page']) }}">{{ get_the_title($item['page']) }}</a></li>
+          <li><a href="{{ get_permalink($item['page']) }}">{{ html_entity_decode(get_the_title($item['page'])) }}</a></li>
         @endif
       @endforeach
     </ul>
