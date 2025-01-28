@@ -10,8 +10,4 @@
   @else
     <p>{{ $block->preview ? 'Add an item...' : 'No items found!' }}</p>
   @endif
-
-  <div>
-    <InnerBlocks allowedBlocks="{{ json_encode($allowedBlocks) }}" />
-  </div>
 </div>

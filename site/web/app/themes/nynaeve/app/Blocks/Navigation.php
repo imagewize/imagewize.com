@@ -151,7 +151,6 @@ class Navigation extends Block
      * @var array
      */
     public $allowedBlocks = [
-        'core/heading',
         'core/navigation',
     ];
 
