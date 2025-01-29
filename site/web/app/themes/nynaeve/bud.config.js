@@ -70,6 +70,7 @@ export default async (app) => {
         padding: true,
         margin: true,
         units: ['px', '%', 'em', 'rem', 'vw', 'vh'],
+        blockGap: false
       },
       layout: {
         contentSize: '55rem',
@@ -84,9 +85,17 @@ export default async (app) => {
           spacing: {
             padding: true,
             margin: true,
+          },
+          typography: {
+            lineHeight: true,
           }
         },
-		  }
+        'core/paragraph': {
+          typography: {
+            lineHeight: true,
+          }
+        },
+      }
     })
     .useTailwindColors()
     .useTailwindFontFamily()

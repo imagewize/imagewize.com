@@ -1309,7 +1309,8 @@
         "rem",
         "vw",
         "vh"
-      ]
+      ],
+      "blockGap": false
     },
     "layout": {
       "contentSize": "55rem",
@@ -1418,6 +1419,14 @@
         "spacing": {
           "padding": true,
           "margin": true
+        },
+        "typography": {
+          "lineHeight": true
+        }
+      },
+      "core/paragraph": {
+        "typography": {
+          "lineHeight": true
         }
       }
     }
