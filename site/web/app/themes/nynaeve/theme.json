@@ -1309,7 +1309,13 @@
         "rem",
         "vw",
         "vh"
-      ]
+      ],
+      "blockGap": false
+    },
+    "layout": {
+      "contentSize": "55rem",
+      "wideSize": "64rem",
+      "fullSize": "100%"
     },
     "typography": {
       "customFontSize": false,
@@ -1413,6 +1419,14 @@
         "spacing": {
           "padding": true,
           "margin": true
+        },
+        "typography": {
+          "lineHeight": true
+        }
+      },
+      "core/paragraph": {
+        "typography": {
+          "lineHeight": true
         }
       }
     }

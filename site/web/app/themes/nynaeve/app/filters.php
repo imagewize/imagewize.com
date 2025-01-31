@@ -49,10 +49,6 @@ function my_acf_json_save_point($path) {
     if ($field_group && isset($field_group['title'])) {
         if ($field_group['title'] === 'Homepage Builder') {
             $custom_path = get_stylesheet_directory() . '/resources/acf-json/homepage-builder';
-        } elseif ($field_group['title'] === 'Footer Options') {
-            $custom_path = get_stylesheet_directory() . '/resources/acf-json/footer-options';
-        } elseif ($field_group['title'] === 'Introduction Text') {
-            $custom_path = get_stylesheet_directory() . '/resources/acf-json/introduction-text';
         }
     }
 
