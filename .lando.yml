@@ -1,0 +1,21 @@
+name: imagewize
+recipe: wordpress
+config:
+  php: '8.2'
+  via: nginx
+  webroot: ./site/web
+  xdebug: true
+proxy:
+  appserver_nginx:
+    - imagewize.lndo.site
+    - imagewize.test
+  mailpit:
+    - mailpit.imagewize.lndo.site
+    - mailpit.imagewize.test
+services:
+  database:
+    portforward: 3306
+  mailpit:
+    type: mailpit
+    mailFrom:
+      - appserver_nginx
