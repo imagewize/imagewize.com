@@ -175,7 +175,7 @@ add_action('woocommerce_single_product_summary', function() {
 
 // Redirect users from cart and checkout pages since they're not needed
 add_action('template_redirect', function() {
-    if (is_cart() || is_checkout()) {
+    if (is_cart() || is_checkout() || is_account_page()) {
         wp_redirect(home_url());
         exit;
     }
