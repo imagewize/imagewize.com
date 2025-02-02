@@ -70,11 +70,11 @@
       
       <div class="flex items-center" id="nav-content">
          <!-- facebook icon -->
-        <a class="inline-block no-underline " href="/my-account/" aria-label="Facebook Account">
+        <a class="inline-block no-underline " href="https://www.facebook.com/imagewize/" aria-label="Facebook Account">
         <x-css-facebook class="fill-current text-white hover:text-textBodyGray w-6 h-6 ml-3" />
         </a>
         <!-- github icons -->
-        <a class="pl-3 inline-block no-underline" href="/cart" aria-label="Github">
+        <a class="pl-3 inline-block no-underline" href="https://github.com/imagewize/" aria-label="Github">
           <x-bi-github class="text-white hover:text-textBodyGray" />
         </a>
       </div>
