@@ -216,16 +216,16 @@
         },
         {
             "name": "imagewize/about-block",
-            "version": "v3.0.1-beta",
+            "version": "v3.1.0-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imagewize/about-block.git",
-                "reference": "96c37b029f98754c3d260c13f1d9d699831dd1d4"
+                "reference": "2cf88abaf8538fe51f127b1513a60894c2464808"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imagewize/about-block/zipball/96c37b029f98754c3d260c13f1d9d699831dd1d4",
-                "reference": "96c37b029f98754c3d260c13f1d9d699831dd1d4",
+                "url": "https://api.github.com/repos/imagewize/about-block/zipball/2cf88abaf8538fe51f127b1513a60894c2464808",
+                "reference": "2cf88abaf8538fe51f127b1513a60894c2464808",
                 "shasum": ""
             },
             "require": {
@@ -257,7 +257,7 @@
                 "issues": "https://github.com/imagewize/about-block/issues",
                 "source": "https://github.com/imagewize/about-block"
             },
-            "time": "2025-02-04T05:19:56+00:00"
+            "time": "2025-02-04T05:33:48+00:00"
         },
         {
             "name": "imagewize/carousel-block",
@@ -300,16 +300,16 @@
         },
         {
             "name": "imagewize/reviews-block",
-            "version": "v3.0.1-beta",
+            "version": "v3.1.0-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imagewize/reviews-block.git",
-                "reference": "9af420d90e5f358530248131fe0f1a85a56fd711"
+                "reference": "88f77f81924c715829ec8651a6213c13825a0dc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imagewize/reviews-block/zipball/9af420d90e5f358530248131fe0f1a85a56fd711",
-                "reference": "9af420d90e5f358530248131fe0f1a85a56fd711",
+                "url": "https://api.github.com/repos/imagewize/reviews-block/zipball/88f77f81924c715829ec8651a6213c13825a0dc4",
+                "reference": "88f77f81924c715829ec8651a6213c13825a0dc4",
                 "shasum": ""
             },
             "require": {
@@ -341,7 +341,7 @@
                 "issues": "https://github.com/imagewize/reviews-block/issues",
                 "source": "https://github.com/imagewize/reviews-block"
             },
-            "time": "2025-02-04T05:14:35+00:00"
+            "time": "2025-02-04T05:36:03+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -2276,6 +2276,7 @@
     "stability-flags": {
         "imagewize/about-block": 10,
         "imagewize/carousel-block": 10,
+        "imagewize/reviews-block": 10,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
