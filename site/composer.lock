@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "309008ea8aacf996a5b8f68f26b26048",
+    "content-hash": "e022059eb688a3fc208dc56957345d02",
     "packages": [
         {
             "name": "composer/installers",
@@ -213,6 +213,135 @@
                 }
             ],
             "time": "2024-07-20T21:45:45+00:00"
+        },
+        {
+            "name": "imagewize/about-block",
+            "version": "v3.1.0-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imagewize/about-block.git",
+                "reference": "2cf88abaf8538fe51f127b1513a60894c2464808"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imagewize/about-block/zipball/2cf88abaf8538fe51f127b1513a60894c2464808",
+                "reference": "2cf88abaf8538fe51f127b1513a60894c2464808",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^2.0",
+                "php": ">=8.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jasper Frumau",
+                    "email": "jasper@imagewize.com",
+                    "homepage": "https://imagewize.com"
+                }
+            ],
+            "description": "WordPress block plugin for displaying an about section with image and text layout",
+            "keywords": [
+                "about",
+                "block-editor",
+                "gutenberg",
+                "plugin",
+                "profile",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/imagewize/about-block/issues",
+                "source": "https://github.com/imagewize/about-block"
+            },
+            "time": "2025-02-04T05:33:48+00:00"
+        },
+        {
+            "name": "imagewize/carousel-block",
+            "version": "v4.0.0-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imagewize/carousel-block.git",
+                "reference": "54b4313ed8f92cf1caf93fcaff952ebe64b2cd87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imagewize/carousel-block/zipball/54b4313ed8f92cf1caf93fcaff952ebe64b2cd87",
+                "reference": "54b4313ed8f92cf1caf93fcaff952ebe64b2cd87",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^2.0",
+                "php": ">=8.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "A responsive carousel slider block for WordPress Gutenberg editor",
+            "keywords": [
+                "block-editor",
+                "carousel",
+                "gutenberg",
+                "plugin",
+                "slider",
+                "slideshow",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/imagewize/carousel-block/issues",
+                "source": "https://github.com/imagewize/carousel-block"
+            },
+            "time": "2025-02-04T05:13:58+00:00"
+        },
+        {
+            "name": "imagewize/reviews-block",
+            "version": "v3.1.0-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imagewize/reviews-block.git",
+                "reference": "88f77f81924c715829ec8651a6213c13825a0dc4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imagewize/reviews-block/zipball/88f77f81924c715829ec8651a6213c13825a0dc4",
+                "reference": "88f77f81924c715829ec8651a6213c13825a0dc4",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^2.0",
+                "php": ">=8.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jasper Frumau",
+                    "email": "jasper@imagewize.com",
+                    "homepage": "https://imagewize.com"
+                }
+            ],
+            "description": "WordPress block plugin for displaying customer reviews in a three-column layout",
+            "keywords": [
+                "block-editor",
+                "gutenberg",
+                "plugin",
+                "reviews",
+                "testimonials",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/imagewize/reviews-block/issues",
+                "source": "https://github.com/imagewize/reviews-block"
+            },
+            "time": "2025-02-04T05:36:03+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -2145,6 +2274,9 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "imagewize/about-block": 10,
+        "imagewize/carousel-block": 10,
+        "imagewize/reviews-block": 10,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
