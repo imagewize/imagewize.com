@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "73d368e9389cd2270859bb23a5c49280",
+    "content-hash": "afba637f6a594c8ec0cb133abf7313d2",
     "packages": [
         {
             "name": "composer/installers",
@@ -1263,6 +1263,24 @@
             "homepage": "https://wordpress.org/plugins/autodescription/"
         },
         {
+            "name": "wpackagist-plugin/safe-svg",
+            "version": "2.3.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/safe-svg/",
+                "reference": "tags/2.3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/safe-svg.2.3.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/safe-svg/"
+        },
+        {
             "name": "wpackagist-plugin/woocommerce",
             "version": "9.6.0",
             "source": {
@@ -2276,6 +2294,7 @@
     "stability-flags": {
         "imagewize/carousel-block": 10,
         "imagewize/reviews-block": 10,
+        "imagewize/about-block": 10,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
