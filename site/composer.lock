@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3036629a021c552f970f8655c7348382",
+    "content-hash": "73d368e9389cd2270859bb23a5c49280",
     "packages": [
         {
             "name": "composer/installers",
@@ -213,6 +213,51 @@
                 }
             ],
             "time": "2024-07-20T21:45:45+00:00"
+        },
+        {
+            "name": "imagewize/about-block",
+            "version": "v5.0.0-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imagewize/about-block.git",
+                "reference": "823cc2e71ddb0ce996dc1c34a70fad3e72b5ee5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imagewize/about-block/zipball/823cc2e71ddb0ce996dc1c34a70fad3e72b5ee5f",
+                "reference": "823cc2e71ddb0ce996dc1c34a70fad3e72b5ee5f",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^2.0",
+                "php": ">=8.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jasper Frumau",
+                    "email": "jasper@imagewize.com",
+                    "homepage": "https://imagewize.com"
+                }
+            ],
+            "description": "WordPress block plugin for displaying an about section with image and text layout",
+            "keywords": [
+                "about",
+                "block-editor",
+                "gutenberg",
+                "plugin",
+                "profile",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/imagewize/about-block/issues",
+                "source": "https://github.com/imagewize/about-block"
+            },
+            "time": "2025-02-05T01:58:57+00:00"
         },
         {
             "name": "imagewize/carousel-block",

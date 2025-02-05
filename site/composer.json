@@ -62,7 +62,8 @@
     "wpengine/advanced-custom-fields-pro": "^6.3",
     "pronamic/gravityforms": "2.9.0",
     "imagewize/carousel-block": "^4.0@beta",
-    "imagewize/reviews-block": "^3.0@beta"
+    "imagewize/reviews-block": "^3.0@beta",
+    "imagewize/about-block": "^5.0@beta"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
