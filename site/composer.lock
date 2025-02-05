@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63be3b7dfab255dd0ed4a6a3596a47ad",
+    "content-hash": "da9c27c578c3af87dadf7b86ecf43f36",
     "packages": [
         {
             "name": "composer/installers",
@@ -1261,6 +1261,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/autodescription/"
+        },
+        {
+            "name": "wpackagist-plugin/safe-svg",
+            "version": "2.3.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/safe-svg/",
+                "reference": "tags/2.3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/safe-svg.2.3.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/safe-svg/"
         },
         {
             "name": "wpackagist-plugin/svg-support",
