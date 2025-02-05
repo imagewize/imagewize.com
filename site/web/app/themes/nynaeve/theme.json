@@ -1428,6 +1428,14 @@
         "typography": {
           "lineHeight": true
         }
+      },
+      "core/image": {
+        "border": {
+          "color": true,
+          "radius": true,
+          "style": true,
+          "width": true
+        }
       }
     }
   }

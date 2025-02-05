@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e022059eb688a3fc208dc56957345d02",
+    "content-hash": "73d368e9389cd2270859bb23a5c49280",
     "packages": [
         {
             "name": "composer/installers",
@@ -216,16 +216,16 @@
         },
         {
             "name": "imagewize/about-block",
-            "version": "v3.1.0-beta",
+            "version": "v5.0.0-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imagewize/about-block.git",
-                "reference": "2cf88abaf8538fe51f127b1513a60894c2464808"
+                "reference": "823cc2e71ddb0ce996dc1c34a70fad3e72b5ee5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imagewize/about-block/zipball/2cf88abaf8538fe51f127b1513a60894c2464808",
-                "reference": "2cf88abaf8538fe51f127b1513a60894c2464808",
+                "url": "https://api.github.com/repos/imagewize/about-block/zipball/823cc2e71ddb0ce996dc1c34a70fad3e72b5ee5f",
+                "reference": "823cc2e71ddb0ce996dc1c34a70fad3e72b5ee5f",
                 "shasum": ""
             },
             "require": {
@@ -257,7 +257,7 @@
                 "issues": "https://github.com/imagewize/about-block/issues",
                 "source": "https://github.com/imagewize/about-block"
             },
-            "time": "2025-02-04T05:33:48+00:00"
+            "time": "2025-02-05T01:58:57+00:00"
         },
         {
             "name": "imagewize/carousel-block",
@@ -2274,7 +2274,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "imagewize/about-block": 10,
         "imagewize/carousel-block": 10,
         "imagewize/reviews-block": 10,
         "roave/security-advisories": 20
