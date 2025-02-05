@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "afba637f6a594c8ec0cb133abf7313d2",
+    "content-hash": "63be3b7dfab255dd0ed4a6a3596a47ad",
     "packages": [
         {
             "name": "composer/installers",
@@ -1263,22 +1263,22 @@
             "homepage": "https://wordpress.org/plugins/autodescription/"
         },
         {
-            "name": "wpackagist-plugin/safe-svg",
-            "version": "2.3.1",
+            "name": "wpackagist-plugin/svg-support",
+            "version": "2.5.8",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/safe-svg/",
-                "reference": "tags/2.3.1"
+                "url": "https://plugins.svn.wordpress.org/svg-support/",
+                "reference": "tags/2.5.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/safe-svg.2.3.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/svg-support.2.5.8.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/safe-svg/"
+            "homepage": "https://wordpress.org/plugins/svg-support/"
         },
         {
             "name": "wpackagist-plugin/woocommerce",
