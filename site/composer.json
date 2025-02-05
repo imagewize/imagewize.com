@@ -64,7 +64,6 @@
     "imagewize/carousel-block": "^4.0@beta",
     "imagewize/reviews-block": "^3.0@beta",
     "imagewize/about-block": "^5.0@beta",
-    "wpackagist-plugin/svg-support": "^2.5",
     "wpackagist-plugin/safe-svg": "^2.3"
   },
   "require-dev": {
