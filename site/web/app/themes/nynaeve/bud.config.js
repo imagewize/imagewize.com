@@ -95,6 +95,14 @@ export default async (app) => {
             lineHeight: true,
           }
         },
+        'core/image': {
+          border: {
+            color: true,
+            radius: true,
+            style: true,
+            width: true,
+          },
+        },
       }
     })
     .useTailwindColors()

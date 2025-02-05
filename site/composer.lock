@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e022059eb688a3fc208dc56957345d02",
+    "content-hash": "3036629a021c552f970f8655c7348382",
     "packages": [
         {
             "name": "composer/installers",
@@ -213,51 +213,6 @@
                 }
             ],
             "time": "2024-07-20T21:45:45+00:00"
-        },
-        {
-            "name": "imagewize/about-block",
-            "version": "v3.1.0-beta",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/imagewize/about-block.git",
-                "reference": "2cf88abaf8538fe51f127b1513a60894c2464808"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/imagewize/about-block/zipball/2cf88abaf8538fe51f127b1513a60894c2464808",
-                "reference": "2cf88abaf8538fe51f127b1513a60894c2464808",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "^2.0",
-                "php": ">=8.0"
-            },
-            "type": "wordpress-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Jasper Frumau",
-                    "email": "jasper@imagewize.com",
-                    "homepage": "https://imagewize.com"
-                }
-            ],
-            "description": "WordPress block plugin for displaying an about section with image and text layout",
-            "keywords": [
-                "about",
-                "block-editor",
-                "gutenberg",
-                "plugin",
-                "profile",
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/imagewize/about-block/issues",
-                "source": "https://github.com/imagewize/about-block"
-            },
-            "time": "2025-02-04T05:33:48+00:00"
         },
         {
             "name": "imagewize/carousel-block",
@@ -2274,7 +2229,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "imagewize/about-block": 10,
         "imagewize/carousel-block": 10,
         "imagewize/reviews-block": 10,
         "roave/security-advisories": 20
