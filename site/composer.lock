@@ -261,16 +261,16 @@
         },
         {
             "name": "imagewize/carousel-block",
-            "version": "v4.0.0-beta",
+            "version": "v4.1.0-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imagewize/carousel-block.git",
-                "reference": "54b4313ed8f92cf1caf93fcaff952ebe64b2cd87"
+                "reference": "c494c8e8df12873c1e6819f6612d5fbb5c832646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imagewize/carousel-block/zipball/54b4313ed8f92cf1caf93fcaff952ebe64b2cd87",
-                "reference": "54b4313ed8f92cf1caf93fcaff952ebe64b2cd87",
+                "url": "https://api.github.com/repos/imagewize/carousel-block/zipball/c494c8e8df12873c1e6819f6612d5fbb5c832646",
+                "reference": "c494c8e8df12873c1e6819f6612d5fbb5c832646",
                 "shasum": ""
             },
             "require": {
@@ -296,7 +296,7 @@
                 "issues": "https://github.com/imagewize/carousel-block/issues",
                 "source": "https://github.com/imagewize/carousel-block"
             },
-            "time": "2025-02-04T05:13:58+00:00"
+            "time": "2025-02-09T01:51:21+00:00"
         },
         {
             "name": "imagewize/reviews-block",
@@ -2276,6 +2276,7 @@
     "stability-flags": {
         "imagewize/carousel-block": 10,
         "imagewize/reviews-block": 10,
+        "imagewize/about-block": 10,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
