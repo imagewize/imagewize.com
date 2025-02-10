@@ -307,16 +307,16 @@
         },
         {
             "name": "imagewize/reviews-block",
-            "version": "v3.1.0-beta",
+            "version": "v3.1.1-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imagewize/reviews-block.git",
-                "reference": "88f77f81924c715829ec8651a6213c13825a0dc4"
+                "reference": "e212d5f6a1a2bc9d0fdcfe3fd988ba95234c151e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imagewize/reviews-block/zipball/88f77f81924c715829ec8651a6213c13825a0dc4",
-                "reference": "88f77f81924c715829ec8651a6213c13825a0dc4",
+                "url": "https://api.github.com/repos/imagewize/reviews-block/zipball/e212d5f6a1a2bc9d0fdcfe3fd988ba95234c151e",
+                "reference": "e212d5f6a1a2bc9d0fdcfe3fd988ba95234c151e",
                 "shasum": ""
             },
             "require": {
@@ -348,20 +348,20 @@
                 "issues": "https://github.com/imagewize/reviews-block/issues",
                 "source": "https://github.com/imagewize/reviews-block"
             },
-            "time": "2025-02-04T05:36:03+00:00"
+            "time": "2025-02-10T04:52:15+00:00"
         },
         {
             "name": "imagewize/services-block",
-            "version": "v4.0.0-beta",
+            "version": "v4.1.0-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/imagewize/services-block.git",
-                "reference": "2cd661447742013feb28fec302e4b26e3efe91f4"
+                "reference": "a3074eecb4ea99a02c5067a5b4a33e77e938f40f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/imagewize/services-block/zipball/2cd661447742013feb28fec302e4b26e3efe91f4",
-                "reference": "2cd661447742013feb28fec302e4b26e3efe91f4",
+                "url": "https://api.github.com/repos/imagewize/services-block/zipball/a3074eecb4ea99a02c5067a5b4a33e77e938f40f",
+                "reference": "a3074eecb4ea99a02c5067a5b4a33e77e938f40f",
                 "shasum": ""
             },
             "require": {
@@ -394,7 +394,7 @@
                 "issues": "https://github.com/imagewize/services-block/issues",
                 "source": "https://github.com/imagewize/services-block"
             },
-            "time": "2025-02-10T02:57:50+00:00"
+            "time": "2025-02-10T04:54:39+00:00"
         },
         {
             "name": "oscarotero/env",
