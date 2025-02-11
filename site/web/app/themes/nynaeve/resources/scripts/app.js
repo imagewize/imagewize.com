@@ -1,12 +1,13 @@
 import domReady from '@roots/sage/client/dom-ready';
+// swiper slider now loaded in carousel block
 // core version + navigation, pagination, autoplay modules:
-import Swiper from 'swiper';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+// import Swiper from 'swiper';
+// import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 // import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+// import 'swiper/css';
+// import 'swiper/css/autoplay';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 
 /**
  * Application entrypoint
@@ -42,20 +43,100 @@ domReady(async () => {
   }
 
   // Portfolio slider
-  const portfolioSlider = new Swiper('.portfolio-slider', {
-    modules: [Autoplay, Navigation, Pagination],
-    autoplay: {
-      delay: 5000,
-    },
-    navigation: {
-      nextEl: '.portfolio-slider-next',
-      prevEl: '.portfolio-slider-prev',
-    },
-    pagination: {
-      el: '.portfolio-slider-pagination',
-      clickable: true,
-    },
+  // Used in carousel block now.
+  // const portfolioSlider = new Swiper('.portfolio-slider', {
+  //   modules: [Autoplay, Navigation, Pagination],
+  //   autoplay: {
+  //     delay: 5000,
+  //   },
+  //   navigation: {
+  //     nextEl: '.portfolio-slider-next',
+  //     prevEl: '.portfolio-slider-prev',
+  //   },
+  //   pagination: {
+  //     el: '.portfolio-slider-pagination',
+  //     clickable: true,
+  //   },
+  // });
+});
+
+// Back to top button functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const goTop = document.getElementById('go-top');
+  
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) {
+      goTop.classList.remove('hidden');
+      goTop.classList.add('is-visible');
+    } else {
+      goTop.classList.remove('is-visible');
+      goTop.classList.add('hidden');
+    }
   });
+});
+
+// Smooth scroll for anchor links
+document.addEventListener('DOMContentLoaded', function() {
+  // Helper function to handle smooth scrolling
+  const smoothScrollTo = (targetId) => {
+    // Special case for #top
+    if (targetId === '#top') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      return;
+    }
+
+    const targetElement = document.querySelector(targetId);
+    if (!targetElement) return;
+
+    const headerHeight = document.querySelector('header').offsetHeight || 0;
+    const elementPosition = targetElement.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - headerHeight - 20;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  };
+
+  // Handle all anchor links
+  document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      const isHomeAnchor = this.hasAttribute('data-home-anchor');
+      
+      // If it's a homepage anchor and we're not on homepage, let the link work normally
+      if (isHomeAnchor && !window.location.pathname.match(/^\/?$/)) {
+        return;
+      }
+      
+      // Check if the href is for the current page
+      const isCurrentPage = href.startsWith('#') || 
+                          href.startsWith(window.location.origin) ||
+                          href.startsWith(window.location.pathname);
+      
+      if (!isCurrentPage) return;
+      
+      // Extract the hash part
+      const hash = href.includes('#') ? '#' + href.split('#')[1] : null;
+      if (!hash) return;
+      
+      e.preventDefault();
+      smoothScrollTo(hash);
+      
+      // Update URL without scrolling
+      history.pushState(null, null, hash);
+    });
+  });
+
+  // Handle initial load with hash in URL
+  if (window.location.hash) {
+    setTimeout(() => {
+      smoothScrollTo(window.location.hash);
+    }, 100);
+  }
 });
 
 /**
