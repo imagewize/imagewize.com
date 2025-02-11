@@ -26,16 +26,19 @@
         w-full md:w-auto absolute top-12 left-0 md:static bg-neutral-900 md:bg-none" role="menubar">
           <ul class="md:flex items-center text-sm pt-4 md:pt-0">
             @foreach ($menu->all() as $item)
-              <li class="group my-menu-item relative {{ $item->classes ?? '' }} {{ $item->active ? 'active text-white 
+              <li class="group my-menu-item relative {{ $item->classes ?? '' }} {{ $item->active && !str_contains($item->url, '#') ? 'active text-white 
               after:absolute after:left-1/2 after:bottom-0 after:w-10 after:h-[3px] after:-ml-[21px] after:bg-neutral-600 
               after:content-[""] after:block after:transition-all after:duration-300 after:ease-in-out' : '' }} 
               flex md:block py-2 px-4 no-underline 
                 font-open-sans text-textBodyGray hover:text-white" role="none">
-                <a href="{{ $item->url }}" 
+                <a href="{{ str_contains($item->url, '#') && !Str::startsWith($item->url, home_url()) ? esc_url(home_url('/')) . ltrim($item->url, '/') : $item->url }}" 
                    role="menuitem" 
                    @if ($item->children) 
                      aria-expanded="false"
                      aria-haspopup="true"
+                   @endif
+                   @if (str_contains($item->url, '#'))
+                     data-home-anchor="true"
                    @endif
                    class="inline-block">
                   {{ $item->label }}
