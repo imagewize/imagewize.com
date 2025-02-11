@@ -1,5 +1,6 @@
 @php(the_content())
 
+{{--
 @if(have_rows('homepage_builder'))
     @while(have_rows('homepage_builder'))
         @php(the_row())
@@ -144,3 +145,4 @@
         {!! $pagination !!}
     </nav>
 @endif
+--}}

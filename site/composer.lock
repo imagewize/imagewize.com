@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43365b5824a085710b9e3edfd2c937bb",
+    "content-hash": "a72247f20e83f468354b02874cf84405",
     "packages": [
         {
             "name": "composer/installers",
@@ -304,6 +304,51 @@
                 "source": "https://github.com/imagewize/carousel-block"
             },
             "time": "2025-02-10T02:59:32+00:00"
+        },
+        {
+            "name": "imagewize/cta-block",
+            "version": "v2.0.0-beta",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/imagewize/cta-block.git",
+                "reference": "279b5fe934b51dec634bec22cf6ed87ff59c79f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/imagewize/cta-block/zipball/279b5fe934b51dec634bec22cf6ed87ff59c79f8",
+                "reference": "279b5fe934b51dec634bec22cf6ed87ff59c79f8",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "^2.0",
+                "php": ">=8.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jasper Frumau",
+                    "email": "jasper@imagewize.com",
+                    "homepage": "https://imagewize.com"
+                }
+            ],
+            "description": "A customizable Call-to-Action block for WordPress Gutenberg editor",
+            "keywords": [
+                "CTA",
+                "block-editor",
+                "call-to-action",
+                "gutenberg",
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/imagewize/cta-block/issues",
+                "source": "https://github.com/imagewize/cta-block"
+            },
+            "time": "2025-02-11T02:37:54+00:00"
         },
         {
             "name": "imagewize/reviews-block",
