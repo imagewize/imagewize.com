@@ -20,3 +20,7 @@ raw_vars:
   - vault_users.*.salt
   - vault_wordpress_env_defaults
   - vault_wordpress_sites
+
+letsencrypt_contact_emails:
+  - jasper@imagewize.com
+  - "{{ mail_admin }}" # defined in groups_vars/all/mail.yml
