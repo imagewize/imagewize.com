@@ -37,10 +37,10 @@
       "type": "package",
       "package": {
         "name": "pronamic/gravityforms",
-        "version": "2.9.0",
+        "version": "2.9.2",
         "type": "wordpress-plugin",
         "dist": {
-          "url": "https://github.com/pronamic/gravityforms/archive/refs/tags/2.9.0.zip",
+          "url": "https://github.com/pronamic/gravityforms/archive/refs/tags/2.9.2.zip",
           "type": "zip"
         }
       }
@@ -53,14 +53,14 @@
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "6.7.1",
+    "roots/wordpress": "6.7.2",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.2.0",
     "wpackagist-theme/twentytwentyfive": "^1.0",
     "wpackagist-plugin/woocommerce": "^9.4",
     "wpackagist-plugin/autodescription": "^5.1",
     "wpengine/advanced-custom-fields-pro": "^6.3",
-    "pronamic/gravityforms": "2.9.0",
+    "pronamic/gravityforms": "2.9.2",
     "imagewize/carousel-block": "^4.0@beta",
     "imagewize/reviews-block": "^3.0@beta",
     "imagewize/about-block": "^5.0@beta",

@@ -14,7 +14,7 @@
         <input class="peer hidden" type="checkbox" id="menu-toggle" aria-hidden="true" />
         <!-- Toggle icon ends -->
         <!-- Logo starts -->
-        <div id="logo" role="banner">
+        <div id="logo" class="md:mb-2" role="banner">
             <a class="brand flex items-center tracking-wide no-underline hover:no-underline font-bold text-white text-xl 
             uppercase ml-5 md:ml-0 mr-5" href="{{ home_url('/') }}">
                 {!! $siteName !!}
@@ -24,13 +24,16 @@
         <!-- Menu starts -->
         <div id="menu" class="hidden peer-checked:block md:flex md:items-center 
         w-full md:w-auto absolute top-12 left-0 md:static bg-neutral-900 md:bg-none" role="menubar">
-          <ul class="md:flex items-center text-sm pt-4 md:pt-0">
+          <ul class="md:flex items-center text-sm py-4 md:pt-0">
             @foreach ($menu->all() as $item)
-              <li class="group my-menu-item relative {{ $item->classes ?? '' }} {{ $item->active && !str_contains($item->url, '#') ? 'active text-white 
-              after:absolute after:left-1/2 after:bottom-0 after:w-10 after:h-[3px] after:-ml-[21px] after:bg-neutral-600 
-              after:content-[""] after:block after:transition-all after:duration-300 after:ease-in-out' : '' }} 
-              flex md:block py-2 px-4 no-underline 
-                font-open-sans text-textBodyGray hover:text-white" role="none">
+            <li class="group my-menu-item relative 
+            {{ $item->classes ?? '' }} 
+            {{ $item->active && !str_contains($item->url, '#') ? 'active 
+            text-white md:after:absolute md:after:left-1/2 md:after:bottom-0 md:after:w-10 md:after:h-[3px] 
+            md:after:-ml-[21px] md:after:bg-neutral-600 md:after:content-[""] md:after:block 
+            md:after:transition-all md:after:duration-300 md:after:ease-in-out' : '' }} 
+            flex md:block py-2 px-4 no-underline font-open-sans text-textBodyGray hover:text-white" 
+            role="none">
                 <a href="{{ str_contains($item->url, '#') && !Str::startsWith($item->url, home_url()) ? esc_url(home_url('/')) . ltrim($item->url, '/') : $item->url }}" 
                    role="menuitem" 
                    @if ($item->children) 
