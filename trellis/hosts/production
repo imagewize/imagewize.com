@@ -2,7 +2,7 @@
 # List each machine only once per [group], even if it will host multiple sites.
 
 [production]
-imagewize.com
+188.245.200.144
 
 [web]
-imagewize.com
+188.245.200.144
