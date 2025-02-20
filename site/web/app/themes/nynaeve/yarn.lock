@@ -2541,9 +2541,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001286, caniuse-lite@npm:^1.0.30001517, caniuse-lite@npm:^1.0.30001646, caniuse-lite@npm:^1.0.30001663, caniuse-lite@npm:^1.0.30001669":
-  version: 1.0.30001699
-  resolution: "caniuse-lite@npm:1.0.30001699"
-  checksum: 10c0/e87b3a0602c3124131f6a21f1eb262378e17a2ee3089e3c472ac8b9caa85cf7d6a219655379302c29c6f10a74051f2a712639d7f98ee0444c73fefcbaf25d519
+  version: 1.0.30001700
+  resolution: "caniuse-lite@npm:1.0.30001700"
+  checksum: 10c0/3d391bcdd193208166d3ad759de240b9c18ac3759dbd57195770f0fcd2eedcd47d5e853609aba1eee5a2def44b0a14eee457796bdb3451a27de0c8b27355017c
   languageName: node
   linkType: hard
 
@@ -6234,6 +6234,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nynaeve@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "nynaeve@workspace:."
+  dependencies:
+    "@roots/bud": "npm:^6.24.0"
+    "@roots/bud-tailwindcss": "npm:^6.24.0"
+    "@roots/sage": "npm:^6.24.0"
+    swiper: "npm:^11.2.1"
+  languageName: unknown
+  linkType: soft
+
 "object-assign@npm:^4.0.1":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1"
@@ -7859,17 +7870,6 @@ __metadata:
   checksum: 10c0/7e3c8b2e88a1841c9671094bbaeebd94448111dd90a81a1f606f3f67708a6ec57763b3b47f06da09fc6054193e0e6709e77325415dc8422b04497a8070fa02d4
   languageName: node
   linkType: hard
-
-"sage@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "sage@workspace:."
-  dependencies:
-    "@roots/bud": "npm:^6.24.0"
-    "@roots/bud-tailwindcss": "npm:^6.24.0"
-    "@roots/sage": "npm:^6.24.0"
-    swiper: "npm:^11.2.1"
-  languageName: unknown
-  linkType: soft
 
 "scheduler@npm:^0.23.0":
   version: 0.23.0
