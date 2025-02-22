@@ -1,0 +1,11 @@
+{
+    "extensions": {
+        "recommendations": [
+            "devsense.profiler-php-vscode",
+            "devsense.phptools-vscode",
+            "bradlc.vscode-tailwindcss",
+            "github.copilot-chat",
+            "github.copilot"
+        ]
+    }
+}
