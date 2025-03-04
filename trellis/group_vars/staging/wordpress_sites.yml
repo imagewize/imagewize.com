@@ -18,3 +18,19 @@ wordpress_sites:
       provider: letsencrypt
     cache:
       enabled: false
+  blocks.imagewize.com:
+    site_hosts:
+    - canonical: blocks.imagewize.com
+      redirects:
+      - www.blocks.imagewize.com
+    local_path: ../blocks
+    branch: master
+    repo: git@github.com:imagewize/imagewize.com.git
+    repo_subtree_path: blocks
+    multisite:
+      enabled: false
+    ssl:
+      enabled: false
+      provider: letsencrypt
+    cache:
+      enabled: false
