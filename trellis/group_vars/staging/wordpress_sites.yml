@@ -9,7 +9,7 @@ wordpress_sites:
       - www.staging.imagewize.com
     local_path: ../site
     branch: master
-    repo: git@github.com:example/example.com.git
+    repo: git@github.com:imagewize/imagewize.com.git
     repo_subtree_path: site
     multisite:
       enabled: false
