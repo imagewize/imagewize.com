@@ -4,9 +4,9 @@
 wordpress_sites:
   imagewize.com:
     site_hosts:
-    - canonical: imagewize.com
+    - canonical: staging.imagewize.com
       redirects:
-      - www.imagewize.com
+      - www.staging.imagewize.com
     local_path: ../site
     branch: master
     repo: git@github.com:example/example.com.git
@@ -20,9 +20,9 @@ wordpress_sites:
       enabled: false
   blocks.imagewize.com:
     site_hosts:
-    - canonical: blocks.imagewize.com
+    - canonical: blocks.staging.imagewize.com
       redirects:
-      - www.blocks.imagewize.com
+      - www.blocks.staging.imagewize.com
     local_path: ../blocks
     branch: master
     repo: git@github.com:imagewize/imagewize.com.git
