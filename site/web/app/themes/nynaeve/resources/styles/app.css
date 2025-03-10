@@ -34,7 +34,7 @@
 */
 
 code {
-  @apply text-sm whitespace-nowrap bg-gray-100 border-gray-200 border-2 rounded-sm font-menlo text-gray-800;
+  @apply text-sm whitespace-normal break-words bg-gray-100 border-gray-200 border-2 rounded-sm font-menlo text-gray-800;
 }
 
 pre > code {
