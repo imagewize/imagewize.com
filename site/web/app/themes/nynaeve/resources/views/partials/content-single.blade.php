@@ -1,4 +1,4 @@
-<article @php(post_class('h-entry container max-w-5xl mt-20 mx-5 lg:mx-auto'))>
+<article @php(post_class('h-entry container max-w-5xl mt-20 px-5 lg:mx-auto'))>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
     <div class="lg:col-span-2">
       <header>
