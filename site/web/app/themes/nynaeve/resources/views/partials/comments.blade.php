@@ -43,6 +43,7 @@
             'class_form' => 'comment-form space-y-4',
             'title_reply_before' => '<h3 class="text-lg font-semibold mb-4">',
             'title_reply_after' => '</h3>',
+            'class_submit' => 'submit bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 shadow-sm transition-all duration-300',
           ]);
         @endphp
       </div>

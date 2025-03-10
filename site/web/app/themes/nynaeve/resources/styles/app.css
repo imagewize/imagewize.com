@@ -251,3 +251,28 @@ body .gform_wrapper .gform_body {
 .comment-author img {
   @apply mb-4;
 }
+
+/**
+ * Comment Form Styling
+ */
+
+.comment-form .submit {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 
+  shadow-sm transition-all duration-300 cursor-pointer w-full sm:w-auto;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+  @apply block w-full p-3 text-gray-900 border border-gray-300 rounded-lg 
+  bg-gray-50 text-base focus:ring-indigo-500 focus:border-indigo-500;
+}
+
+.comment-form label {
+  @apply block mb-1 font-medium text-gray-700;
+}
+
+.comment-respond .comment-reply-title {
+  @apply text-xl font-bold mb-4;
+}
