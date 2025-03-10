@@ -38,11 +38,11 @@ code {
 }
 
 pre > code {
-  @apply block whitespace-pre leading-6 border-none;
+  @apply block whitespace-pre-wrap break-words leading-6 border-none;
 }
 
 .wp-block-code {
-  @apply my-5 rounded-md bg-gray-100 pt-10 px-12 pb-12;
+  @apply my-5 rounded-md bg-gray-100 pt-5 px-6 pb-6;
 }
 
 .post .wp-block-latest-posts__list {
