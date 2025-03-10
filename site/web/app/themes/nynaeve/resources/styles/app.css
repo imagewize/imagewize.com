@@ -42,7 +42,7 @@ pre > code {
 }
 
 .wp-block-code {
-  @apply my-5 rounded-md bg-gray-100 pt-5 px-6 pb-6;
+  @apply my-5 rounded-md bg-gray-100 pt-5 px-6 pb-6 md:mx-5;
 }
 
 .post .wp-block-latest-posts__list {
