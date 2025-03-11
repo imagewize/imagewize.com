@@ -29,6 +29,7 @@ class Comments extends Composer
             'next' => $this->next(),
             'paginated' => $this->paginated(),
             'closed' => $this->closed(),
+            'comments_open' => $this->commentsOpen(),
         ];
     }
 
@@ -114,6 +115,16 @@ class Comments extends Composer
      */
     public function closed()
     {
-        return ! comments_open() && get_comments_number() != '0' && post_type_supports(get_post_type(), 'comments');
+        return ! comments_open() && post_type_supports(get_post_type(), 'comments');
+    }
+
+    /**
+     * Determine if comments are open for this post.
+     *
+     * @return bool
+     */
+    public function commentsOpen()
+    {
+        return comments_open() && post_type_supports(get_post_type(), 'comments');
     }
 }
