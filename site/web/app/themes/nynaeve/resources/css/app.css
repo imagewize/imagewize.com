@@ -1,8 +1,13 @@
-@import 'common/fonts';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './fonts.css';
+@import "tailwindcss" theme(static);
+@source "../views/";
+@source "../../app/";
 
+
+@theme {
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-menlo: "Menlo", monospace;
+}
 
 .e-content p {
   @apply font-open-sans text-base leading-relaxed text-gray-500;
@@ -42,11 +47,15 @@ pre > code {
 }
 
 .wp-block-code {
-  @apply my-5 rounded-md bg-gray-100 pt-5 px-6 pb-6 md:mx-5;
+  @apply mr-5 rounded-md bg-gray-100 pt-5 px-6 pb-6 md:mx-5;
 }
 
 .post .wp-block-latest-posts__list {
   @apply list-disc leading-7 text-gray-500;
+}
+
+.wp-block-list {
+  @apply list-disc list-inside;
 }
 
 .wp-block-latest-posts__post-title  {
@@ -269,6 +278,7 @@ body .gform_wrapper .gform_body {
   bg-gray-50 text-base focus:ring-indigo-500 focus:border-indigo-500;
 }
 
+/** Comments Form Label Styling */
 .comment-form label {
   @apply block mb-1 font-medium text-gray-700;
 }
