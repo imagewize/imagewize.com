@@ -1,13 +1,7 @@
-import domReady from '@roots/sage/client/dom-ready';
-// swiper slider now loaded in carousel block
-// core version + navigation, pagination, autoplay modules:
-// import Swiper from 'swiper';
-// import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-// import Swiper and modules styles
-// import 'swiper/css';
-// import 'swiper/css/autoplay';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
+import.meta.glob([
+  '../images/**',
+  '../fonts/**',
+]);
 
 /**
  * Application entrypoint
@@ -42,22 +36,6 @@ domReady(async () => {
     // console.error('Gallery not found.');
   }
 
-  // Portfolio slider
-  // Used in carousel block now.
-  // const portfolioSlider = new Swiper('.portfolio-slider', {
-  //   modules: [Autoplay, Navigation, Pagination],
-  //   autoplay: {
-  //     delay: 5000,
-  //   },
-  //   navigation: {
-  //     nextEl: '.portfolio-slider-next',
-  //     prevEl: '.portfolio-slider-prev',
-  //   },
-  //   pagination: {
-  //     el: '.portfolio-slider-pagination',
-  //     clickable: true,
-  //   },
-  // });
 });
 
 // Back to top button functionality

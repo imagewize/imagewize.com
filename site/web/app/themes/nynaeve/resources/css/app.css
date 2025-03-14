@@ -1,8 +1,13 @@
-@import 'common/fonts';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './fonts.css';
+@import "tailwindcss" theme(static);
+@source "../views/";
+@source "../../app/";
 
+
+@theme {
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-menlo: "Menlo", monospace;
+}
 
 .e-content p {
   @apply font-open-sans text-base leading-relaxed text-gray-500;
