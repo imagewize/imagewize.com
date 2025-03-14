@@ -8,7 +8,7 @@
 #
 ---
 - name: Install npm dependencies
-  command: yarn
+  command: npm install
   delegate_to: localhost
   args:
     chdir: "{{ project_local_path }}/web/app/themes/nynaeve"
@@ -19,7 +19,7 @@
     chdir: "{{ deploy_helper.new_release_path }}/web/app/themes/nynaeve"
 
 - name: Compile assets for production
-  command: yarn build
+  command: npm run build
   delegate_to: localhost
   args:
     chdir: "{{ project_local_path }}/web/app/themes/nynaeve"
