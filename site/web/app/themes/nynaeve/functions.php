@@ -31,13 +31,11 @@ require $composer;
 |
 */
 
-add_action('after_setup_theme', function () {
-    Application::configure()
-        ->withProviders([
-            App\Providers\ThemeServiceProvider::class,
-        ])
-        ->boot();
-}, 0);
+Application::configure()
+    ->withProviders([
+        App\Providers\ThemeServiceProvider::class,
+    ])
+    ->boot();
 
 /*
 |--------------------------------------------------------------------------
