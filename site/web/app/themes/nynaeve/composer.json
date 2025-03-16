@@ -43,14 +43,13 @@
     "php": ">=8.2",
     "blade-ui-kit/blade-icons": "^1.7",
     "codeat3/blade-clarity-icons": "^1.9",
-    "davidhsianturi/blade-bootstrap-icons": "^1.5",
     "generoi/sage-woocommerce": "^1.1",
     "khatabwedaa/blade-css-icons": "^1.4",
     "log1x/acf-composer": "^3.3",
     "log1x/navi": "^3.1",
     "log1x/sage-svg": "^2.0",
     "owenvoke/blade-fontawesome": "^2.8",
-    "roots/acorn": "^5.0"
+    "roots/acorn": "5.0.1"
   },
   "require-dev": {
     "laravel/pint": "^1.20"
