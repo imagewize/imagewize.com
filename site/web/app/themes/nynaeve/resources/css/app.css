@@ -64,6 +64,9 @@ pre > code {
   @apply list-disc leading-7 text-gray-500;
 }
 
+.wp-block-latest-posts__list .wp-block-latest-posts__post-title {
+  @apply text-footertext;
+}
 .wp-block-list {
   @apply list-disc list-inside;
 }
