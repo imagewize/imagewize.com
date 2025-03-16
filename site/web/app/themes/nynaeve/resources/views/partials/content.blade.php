@@ -2,7 +2,7 @@
   <article @php(post_class('lg:grid lg:grid-cols-12 lg:gap-4 mb-12 mx-5 md:mx-none'))>
     
     <div class="col-span-2 flex justify-center items-start pt-2">
-      <div class="hidden lg:flex rounded-full overflow-hidden w-24 h-24 border-8 border-borderGray">
+      <div class="hidden lg:flex rounded-full overflow-hidden w-24 h-24 border-8 border-bordergray">
         {!! get_avatar(get_the_author_meta('ID'), 96, '', '', ['class' => 'w-full h-full object-cover']) !!}
       </div>
     </div>
@@ -18,7 +18,7 @@
       </header>
     </div>
 
-    <div class="col-span-4 entry-summary font-open-sans text-base leading-loose text-textBodyGray">
+    <div class="col-span-4 entry-summary font-open-sans text-base leading-loose text-textbodygray">
       @php(the_excerpt())
     </div>
 

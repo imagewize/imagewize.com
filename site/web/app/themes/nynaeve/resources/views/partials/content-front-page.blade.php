@@ -6,11 +6,11 @@
         @php(the_row())
 
         @if(get_row_layout() == 'about_block')
-            <section id="about" class="py-24 bg-bgGray">
+            <section id="about" class="py-24 bg-bggray">
                 <div class="container mx-auto max-w-5xl px-4">
                     <div class="flex flex-col md:flex-row gap-8">
                         <div class="md:w-1/4 w-full">
-                            <div id="about-profile" class="rounded-full overflow-hidden w-24 h-24 border-8 border-borderGray mx-auto">
+                            <div id="about-profile" class="rounded-full overflow-hidden w-24 h-24 border-8 border-bordergray mx-auto">
                                 @php($image = get_sub_field('about_profile_picture'))
                                 @if(!empty($image))
                                     <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="w-full h-full object-cover">
@@ -19,8 +19,8 @@
                         </div>
                         <div class="md:w-3/4 w-full">
                             <h2 id="about-header" class="text-3xl font-open-sans font-semi-bold mb-6">{{ get_sub_field('about_title') }}</h2>
-                            <p class="text-xl leading-relaxed font-light mb-6 text-textBodyGray font-open-sans">{{ get_sub_field('about_lead') }}</p>
-                            <div class="prose text-textBodyGray text-base leading-loose font-open-sans">{!! get_sub_field('about_text') !!}</div>
+                            <p class="text-xl leading-relaxed font-light mb-6 text-textbodygray font-open-sans">{{ get_sub_field('about_lead') }}</p>
+                            <div class="prose text-textbodygray text-base leading-loose font-open-sans">{!! get_sub_field('about_text') !!}</div>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                 <div class="container mx-auto max-w-4xl px-4">
                     <div class="mb-12">
                         <h2 class="text-3xl font-bold text-center font-open-sans">{{ get_sub_field('services_title') }}</h2>
-                        <p class="mx-auto  max-w-2xl text-xl leading-relaxed my-8 text-center text-textBodyGray font-open-sans font-light container">
+                        <p class="mx-auto  max-w-2xl text-xl leading-relaxed my-8 text-center text-textbodygray font-open-sans font-light container">
                           {{ get_sub_field('services_introduction_text_block') }}
                         </p>
                     </div>
@@ -54,7 +54,7 @@
                                             group-hover:w-1/2 group-hover:bg-gray-700 transition-all duration-300"></span>
                                         </span>
                                     </h3>
-                                    <div class="service-body prose text-textBodyGray font-open-sans leading-loose col-start-2">
+                                    <div class="service-body prose text-textbodygray font-open-sans leading-loose col-start-2">
                                         {!! get_sub_field('text_box') !!}
                                     </div>
                                 </div>
@@ -103,12 +103,12 @@
             </section>
 
         @elseif(get_row_layout() == 'cta_banner')
-            <section id="CTA" class="py-16 bg-ctaBlue text-white">
+            <section id="CTA" class="py-16 bg-ctablue text-white">
                 <div class="container mx-auto max-w-2xl px-4 text-center">
                     <h2 class="text-3xl font-open-sans font-bold my-6">{{ get_sub_field('cta_title') }}</h2>
                     <p class="text-lg font-open-sans mb-8">{{ get_sub_field('cta_text') }}</p>
                     <a href="{{ get_sub_field('cta_button_url') }}" class="inline-flex items-center justify-center h-16 w-full max-w-80 px-8 py-3 
-                    bg-ctaButtonBlue hover:bg-ctaButtonBlueHover text-white rounded-lg font-semibold">
+                    bg-ctabuttonblue hover:bg-ctabuttonbluehover text-white rounded-lg font-semibold">
                         {{ get_sub_field('cta_button_text') }}
                     </a>
                 </div>

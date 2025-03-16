@@ -87,7 +87,7 @@ if ( post_password_required() ) {
           }
         ?>
         
-        <div class="summary entry-summary font-open-sans text-bgGray">
+        <div class="summary entry-summary font-open-sans text-bggray">
           <?php do_action('woocommerce_single_product_summary'); ?>
         </div>
       </div>
