@@ -1,9 +1,9 @@
 # Placeholder `deploy_build_before` hook for building theme assets on the
 # host machine and then copying the files to the remote server
 #
-# ⚠️ This example assumes your theme is using Nynaeve 11
+# ⚠️ This example assumes your theme is using Sage 11
 #
-# Uncomment the lines below if you are using Nynaeve 11
+# Uncomment the lines below if you are using Sage 11
 # and replace `nynaeve` with your theme folder
 #
 ---
