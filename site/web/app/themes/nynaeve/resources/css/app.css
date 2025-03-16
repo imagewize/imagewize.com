@@ -7,6 +7,16 @@
 @theme {
   --font-open-sans: "Open Sans", sans-serif;
   --font-menlo: "Menlo", monospace;
+  
+  /* Custom colors */
+  --color-textbodygray: #98999a;
+  --color-bggray: #ebeced;
+  --color-bordergray: #cbcbcb;
+  --color-ctablue: #017cb6;
+  --color-ctabuttonblue: #026492;
+  --color-ctabuttonbluehover: #02567e;
+  --color-footerbg: #171b23;
+  --color-footertext: #465166;
 }
 
 .e-content p {
@@ -47,7 +57,7 @@ pre > code {
 }
 
 .wp-block-code {
-  @apply mr-5 rounded-md bg-gray-100 pt-5 px-6 pb-6 md:mx-5;
+  @apply my-5 rounded-md bg-gray-100 pt-5 px-6 pb-6 md:mr-5;
 }
 
 .post .wp-block-latest-posts__list {
