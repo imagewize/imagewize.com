@@ -3,6 +3,9 @@ import.meta.glob([
   '../fonts/**',
 ]);
 
+// Import our local domReady function with named import
+import { domReady } from './utils/dom-ready';
+
 /**
  * Application entrypoint
  */
