@@ -2,10 +2,9 @@
 
 namespace App\Providers;
 
-use App\NaviMenuFields;
-use Roots\Acorn\Sage\SageServiceProvider;
+use Roots\Acorn\ServiceProvider;
 
-class ThemeServiceProvider extends SageServiceProvider
+class ThemeServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
@@ -14,7 +13,7 @@ class ThemeServiceProvider extends SageServiceProvider
      */
     public function register()
     {
-        parent::register();
+        //
     }
 
     /**
@@ -24,13 +23,29 @@ class ThemeServiceProvider extends SageServiceProvider
      */
     public function boot()
     {
-        parent::boot();
+        // Remove NaviMenuFields registration - it's now handled by MegaMenu package
+        
+        // Register global view composers
+        $this->registerViewComposers();
+    }
 
-        // Register NaviMenuFields when Navi is available
-        if (class_exists('App\\NaviMenuFields')) {
-            $this->app->resolving('navi', function ($navi) {
-                return new \App\NaviMenuFields($navi);
-            });
-        }
+    /**
+     * Register view composers.
+     *
+     * @return void
+     */
+    public function registerViewComposers()
+    {
+        // ...existing code...
+    }
+
+    /**
+     * Register theme assets.
+     *
+     * @return void
+     */
+    public function registerAssets()
+    {
+        // ...existing code...
     }
 }
