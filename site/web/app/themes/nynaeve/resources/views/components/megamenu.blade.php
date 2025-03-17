@@ -1,4 +1,7 @@
-@php($menu = Navi::build($name))  
+@php
+$menu = Navi::build($name);
+@endphp
+
 @if ($menu->isNotEmpty())
 <nav class="w-full z-30 top-0 py-1" role="navigation" aria-label="Main navigation">
     <div class="w-full container mx-auto max-w-5xl flex flex-wrap items-center justify-between mt-0 px-8 py-6">
