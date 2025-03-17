@@ -18,7 +18,10 @@ This repository contains the complete setup for imagewize.com, built using the m
 
 - **Trellis**: Server provisioning and deployment ([See Trellis README](trellis/README.md))
 - **Bedrock**: Modern WordPress boilerplate ([See Bedrock README](site/README.md))
-- **Sage 10**: Modern WordPress theme framework with our custom theme Nyneave
+- **Sage 11**: Modern WordPress theme framework with our custom theme Nyneave, featuring:
+  - **Vite**: Fast build tooling for modern frontend development
+  - **Acorn 5**: Advanced Laravel-based framework for WordPress
+  - **Tailwind 4**: Utility-first CSS framework for rapid UI development
 
 ## Requirements
 
