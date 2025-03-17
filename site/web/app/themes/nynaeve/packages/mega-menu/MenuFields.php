@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Fields;
+namespace App\Packages\MegaMenu;
 
-use Log1x\AcfComposer\Field;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-class MenuFields extends Field
+class MenuFields
 {
     /**
      * The field group.

@@ -76,6 +76,7 @@ return [
 
     'paths' => [
         'Fields' => base_path('app/Fields'),
+        // Packages are loaded by their own service providers when enabled
     ],
 
 ];

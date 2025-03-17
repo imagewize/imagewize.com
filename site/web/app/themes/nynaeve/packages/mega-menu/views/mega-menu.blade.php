@@ -43,7 +43,7 @@ $menu = Navi::build($name);
                    @if ($item->children) 
                      aria-expanded="false"
                      aria-haspopup="true"
-                     class="inline-block no-underline flex items-center"
+                     class="no-underline flex items-center"
                    @else
                      class="inline-block no-underline"
                    @endif

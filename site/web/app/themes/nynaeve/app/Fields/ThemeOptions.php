@@ -16,23 +16,26 @@ class ThemeOptions extends Field
     {
         $themeOptions = new FieldsBuilder('theme_options', [
             'title' => 'Theme Options',
-            'menu_order' => 0,
+            'style' => 'seamless',
         ]);
 
         $themeOptions
             ->setLocation('options_page', '==', 'theme-options');
 
         $themeOptions
-            ->addTab('navigation', [
-                'label' => 'Navigation',
-            ])
+            ->addTab('general', ['label' => 'General Settings'])
             ->addTrueFalse('use_megamenu', [
                 'label' => 'Use Mega Menu',
-                'instructions' => 'Enable to use the mega menu navigation instead of the standard menu',
+                'instructions' => 'Enable the advanced mega menu navigation',
                 'default_value' => 0,
                 'ui' => 1,
+                'wrapper' => [
+                    'class' => 'feature-toggle-option',
+                ],
             ]);
-
+            
+        // Add other theme options as needed
+        
         return $themeOptions->build();
     }
 }

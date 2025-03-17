@@ -7,7 +7,7 @@
     @endphp
     
     @if ($use_megamenu)
-      <x-megamenu name="primary_navigation" />
+      <x-mega-menu name="primary_navigation" />
     @else
       <x-navigation name="primary_navigation" />
     @endif

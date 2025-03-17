@@ -7,6 +7,7 @@
  namespace App;
  
  use Illuminate\Support\Facades\Vite;
+ use App\Packages\MegaMenu\ServiceProvider as MegaMenuServiceProvider;
 
 /**
  * Inject styles into the block editor.
@@ -87,6 +88,14 @@ add_filter('theme_file_path', function ($path, $file) {
         ? public_path('build/assets/theme.json')
         : $path;
 }, 10, 2);
+
+/**
+ * Register theme packages
+ */
+add_action('after_setup_theme', function () {
+    // Always register the MegaMenu package, but it will conditionally load fields
+    app()->register(MegaMenuServiceProvider::class);
+}, 15); // Register before main theme setup
 
 /**
  * Register the initial theme setup.
