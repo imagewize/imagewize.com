@@ -17,7 +17,7 @@
         <div id="logo" class="md:mb-4" role="banner">
             <a class="brand flex items-center tracking-wide no-underline hover:no-underline font-bold text-white text-xl 
             uppercase ml-5 md:ml-0 mr-5" href="{{ home_url('/') }}">
-            <img src="{{ asset('images/logo/logo-imagewize-smaller.png') }}" alt="Imagewize Logo" class="h-8 w-auto mr-2 hidden md:block">
+            <img src="{{ Vite::asset('resources/images/logo/logo-imagewize-smaller.png') }}" alt="Imagewize Logo" class="h-8 w-auto mr-2 hidden md:block">
             {!! $siteName !!}
             </a>
         </div>
@@ -33,7 +33,7 @@
             text-white md:after:absolute md:after:left-1/2 md:after:bottom-0 md:after:w-10 md:after:h-[3px] 
             md:after:-ml-[21px] md:after:bg-neutral-600 md:after:content-[""] md:after:block 
             md:after:transition-all md:after:duration-300 md:after:ease-in-out' : '' }} 
-            flex md:block py-2 px-4 no-underline font-open-sans text-textBodyGray hover:text-white" 
+            flex md:block py-2 px-4 no-underline font-open-sans text-textbodygray hover:text-white" 
             role="none">
                 <a href="{{ str_contains($item->url, '#') && !Str::startsWith($item->url, home_url()) ? esc_url(home_url('/')) . ltrim($item->url, '/') : $item->url }}" 
                    role="menuitem" 
@@ -44,7 +44,7 @@
                    @if (str_contains($item->url, '#'))
                      data-home-anchor="true"
                    @endif
-                   class="inline-block">
+                   class="inline-block no-underline" >
                   {{ $item->label }}
                   {{-- 
                   @if ($item->children)
@@ -55,13 +55,13 @@
                 @if ($item->children)
                   <!-- Child menu items start -->
                   <ul class="hidden md:group-hover:block md:absolute md:top-full md:left-0 md:min-w-[200px] 
-                  md:bg-neutral-900 md:shadow-lg md:z-50 text-sm text-textBodyGray"
+                  md:bg-neutral-900 md:shadow-lg md:z-50 text-sm text-textbodygray"
                       role="menu" 
                       aria-label="{{ $item->label }} submenu">
                     @foreach ($item->children as $child)
                       <li class="my-child-item {{ $child->classes ?? '' }} {{ $child->active ? 'active text-white' : '' }} block no-underline 
                        py-2 px-4 hover:text-white" role="none">
-                        <a href="{{ $child->url }}" role="menuitem">
+                        <a href="{{ $child->url }}" role="menuitem" class="no-underline">
                           {{ $child->label }}
                         </a>
                       </li>
@@ -78,11 +78,11 @@
       <div class="flex items-center" id="nav-content">
          <!-- facebook icon -->
         <a class="inline-block no-underline " href="https://www.facebook.com/imagewize/" aria-label="Facebook Account">
-        <x-css-facebook class="fill-current text-white hover:text-textBodyGray w-6 h-6 ml-3" />
+        <x-css-facebook class="fill-current text-white hover:text-textbodygray w-6 h-6 ml-3" />
         </a>
         <!-- github icons -->
         <a class="pl-3 inline-block no-underline" href="https://github.com/imagewize/" aria-label="Github">
-          <x-bi-github class="text-white hover:text-textBodyGray" />
+          <x-fab-github class="text-white hover:text-textbodygray" />
         </a>
       </div>
     </div> <!-- navigation container end -->

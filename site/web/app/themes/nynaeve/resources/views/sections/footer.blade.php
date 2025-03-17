@@ -1,4 +1,4 @@
-<footer class="content-info py-20 px-10 bg-footerBg text-footerText font-open-sans">
+<footer class="content-info py-20 px-10 bg-footerbg text-footertext font-open-sans">
   @php(dynamic_sidebar('sidebar-footer'))
 </footer>
 

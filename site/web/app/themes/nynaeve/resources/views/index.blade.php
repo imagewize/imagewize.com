@@ -3,7 +3,7 @@
 @section('content')
   @include('partials.page-header')
 
-  <div class="container mx-auto max-w-6xl my-16 font-open-sans text-textBodyGray text-base leading-loose">
+  <div class="container mx-auto max-w-6xl my-16 font-open-sans text-textbodygray text-base leading-loose">
     @if (! have_posts())
       <x-alert type="warning">
         {!! __('Sorry, no results were found.', 'sage') !!}

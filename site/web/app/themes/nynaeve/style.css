@@ -2,14 +2,14 @@
 Theme Name:         Nynaeve
 Theme URI:          https://imagewize.com
 Description:        A custom WordPress theme for Imagewize based on Sage 10
-Version:            1.0.0
+Version:            2.0.0
 Author:             Jasper Frumau
 Author URI:         https://magewize.com
 Text Domain:        nynaeve
 License:            MIT License
 License URI:        https://opensource.org/licenses/MIT
-Requires PHP:       8.1
-Requires at least:  5.9
+Requires PHP:       8.2
+Requires at least:  6.6
 */
 
 /* Back to top button */
