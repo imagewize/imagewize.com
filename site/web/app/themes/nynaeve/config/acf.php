@@ -64,4 +64,18 @@ return [
 
     'manifest' => storage_path('framework/cache'),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Field Builder
+    |--------------------------------------------------------------------------
+    |
+    | Register fields with ACF Composer based on the configured paths.
+    | ACF Composer will automatically register fields found in these paths.
+    |
+    */
+
+    'paths' => [
+        'Fields' => base_path('app/Fields'),
+    ],
+
 ];

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\NaviMenuFields;
 use Roots\Acorn\Sage\SageServiceProvider;
 
 class ThemeServiceProvider extends SageServiceProvider
@@ -24,5 +25,12 @@ class ThemeServiceProvider extends SageServiceProvider
     public function boot()
     {
         parent::boot();
+
+        // Register NaviMenuFields when Navi is available
+        if (class_exists('App\\NaviMenuFields')) {
+            $this->app->resolving('navi', function ($navi) {
+                return new \App\NaviMenuFields($navi);
+            });
+        }
     }
 }
