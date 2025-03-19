@@ -39,11 +39,18 @@
       "App\\": "app/"
     }
   },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "./packages/imagewize/img-mega-menu"
+    }
+  ],
   "require": {
     "php": ">=8.2",
     "blade-ui-kit/blade-icons": "^1.7",
     "codeat3/blade-clarity-icons": "^1.9",
     "generoi/sage-woocommerce": "^1.1",
+    "imagewize/img-mega-menu": "*",
     "khatabwedaa/blade-css-icons": "^1.4",
     "log1x/acf-composer": "^3.3",
     "log1x/navi": "^3.1",
